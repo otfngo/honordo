@@ -2,7 +2,9 @@
   <div id="app">
     <m-header></m-header>
     <carousel></carousel>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
     <m-footer></m-footer>
   </div>
 </template>
@@ -13,7 +15,7 @@
   import MFooter from 'components/m-footer/m-footer.vue';
 
   export default {
-    components:{
+    components: {
       MHeader,
       Carousel,
       MFooter

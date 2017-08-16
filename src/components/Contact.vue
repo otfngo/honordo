@@ -58,13 +58,15 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import "~common/stylus/variable";
+
   .contact-wrapper {
     h5 {
-      font-size: 16px;
+      font-size: $font-size-large;
     }
     p {
       line-height: 1;
-      font-size: 12px;
+      font-size: $font-size-base;
       margin: 5px 0;
     }
 
@@ -86,7 +88,7 @@
         content: '';
         width: 50%;
         height: 1px;
-        background-color: #eee;
+        background-color: $background-color-gray;
       }
     }
   }

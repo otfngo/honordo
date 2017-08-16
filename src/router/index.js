@@ -12,27 +12,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
       component: Home
     },
     {
       path: '/about',
-      name: 'About',
       component: About
     },
     {
       path: '/bussiness',
-      name: 'Bussiness',
       component: Bussiness
     },
     {
       path: '/case',
-      name: 'Case',
       component: Case
     },
     {
       path: '/contact',
-      name: 'Contact',
       component: Contact
     }
   ]

@@ -154,8 +154,10 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import "~common/stylus/variable";
+  @import "~common/stylus/mixin";
+
   .btn {
     outline: none;
     box-shadow: none;
@@ -176,7 +178,7 @@
   }
 
   .about {
-    background-image url("../common/image/bg_aboutus.png");
+    background-image: url("../common/image/bg_aboutus.png");
   }
 
   .case {
@@ -185,14 +187,14 @@
 
   .about-wrapper {
     margin-bottom: 50px;
-    background: rgba(255, 255, 255, 0.8);
+    bg-opacity(0.8);
     .img {
       max-width: 100%;
       padding-top: 50px;
       vertical-align: top;
     }
     .content {
-      font-size: 12px;
+      font-size: $font-size-base;
       .intro {
         text-align: justify;
       }
@@ -203,7 +205,7 @@
           content: '>>'
         }
         a {
-          color: #000;
+          color: $text-color-black;
         }
       }
     }
@@ -214,7 +216,7 @@
     font-size: 0;
     padding: 20px 0;
     margin-top: 200px;
-    background-color: #1771f9;
+    background-color: $background-color-base;
     &:before {
       position: absolute;
       left: 50%;
@@ -222,19 +224,19 @@
       transform: translate(-50%);
       content: '';
       border: 20px solid transparent;
-      border-bottom-color: #1771f9;
+      border-bottom-color: $background-color-base;
     }
     .header {
       position: absolute;
       bottom: 100%;
       left: 50%;
       transform: translate(-50%);
-      color: #000;
+      color: $text-color-black;
     }
     .content {
-      font-size: 14px;
+      font-size: $font-size-medium;
       text-align: center;
-      color: #fff;
+      color: $text-color-white;
       .img {
         margin: 20px auto;
         border-radius: 50%;
@@ -263,12 +265,12 @@
           margin-bottom: 5px;
           border: 1px solid #555;
           margin-right: -1px;
-          background: rgba(255, 255, 255, 0.5);
+          bg-opacity(0.5);
           cursor: pointer;
           &.active {
-            color: #fff;
-            border-color: #1771f9
-            background-color: #1771f9;
+            color: $text-color-white;
+            border-color: $background-color-base
+            background-color: $background-color-base;
           }
           &:first-child {
             border-radius: 4px 0 0 4px;

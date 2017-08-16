@@ -66,56 +66,6 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  * {
-    box-sizing: border-box;
-    font-size: 12px;
-    word-break: break-word;
-    padding: 0;
-    margin: 0;
-  }
-
-  html, body {
-
-    height: 100%;
-  }
-
-  .m-r-10 {
-    margin-right: 10px;
-  }
-
-  .header {
-    text-align: center;
-    .en {
-      font-size: 35px;
-      text-transform: uppercase;
-      padding-top: 50px;
-    }
-
-    .zh {
-      display: inline-block;
-      position: relative;
-      font-size: 36px;
-      padding-bottom: 5px;
-      margin-bottom: 40px;
-      &:after {
-        position: absolute;
-        left: 25%;
-        bottom: 0;
-        content: '';
-        width: 50%;
-        height: 3px;
-        background-color: #1771f9;
-      }
-    }
-  }
-
-  #app {
-    font-family: 'Microsoft YaHei UI', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-  }
-
   .navbar-nav {
     .nav-item {
       .nav-link {

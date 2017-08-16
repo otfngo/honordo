@@ -36,6 +36,8 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  @import "~common/stylus/variable";
+
   .bussiness-wrapper {
     .list-group {
       .active {
@@ -47,7 +49,7 @@
           top: 50%;
           transform: translateY(-50%);
           border: 10px solid transparent;
-          border-left-color: #007bff;
+          border-left-color: $border-color-base;
         }
       }
     }

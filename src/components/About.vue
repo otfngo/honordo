@@ -57,24 +57,27 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import "~common/stylus/variable";
+  @import "~common/stylus/mixin";
+
   .about {
     background-image: url(../common/image/bg_aboutus.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     .about-wrapper {
-      background: rgba(255, 255, 255, 0.8);
+      bg-opacity(0.8);
       .img {
         max-width: 100%;
       }
       h5 {
-        color: #1771f9;
+        color: $background-color-base;
       }
       .content-item {
         margin-bottom: 20px;
         p {
           line-height: 1;
-          font-size: 12px;
+          font-size: $font-size-base;
           margin: 5px 0;
         }
       }

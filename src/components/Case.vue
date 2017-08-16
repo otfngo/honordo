@@ -26,6 +26,8 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import "~common/stylus/variable";
+
   .case-wrapper {
     .content {
       .category {
@@ -42,12 +44,11 @@
           margin-bottom: 5px;
           border: 1px solid #555;
           margin-right: -1px;
-          background: rgba(255, 255, 255, 0.5);
           cursor: pointer;
           &.active {
-            color: #fff;
-            border-color: #1771f9
-            background-color: #1771f9;
+            color: $text-color-white;
+            border-color: $border-color-base;
+            background-color: $background-color-base;
           }
           &:first-child {
             border-radius: 4px 0 0 4px;

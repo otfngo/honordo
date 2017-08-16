@@ -56,7 +56,7 @@
           height: 3px;
           margin-bottom: -5px;
           background-color: $background-color-base;
-          transition: all .6s;
+          transition: all .4s;
         }
         &:hover {
           color: $background-color-base;

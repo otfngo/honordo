@@ -9,21 +9,21 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#/">首页</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#/about">关于我们</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#/bussiness">业务范围</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#/case">案例展示</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#/contact">联系我们</a>
-          </li>
+          <router-link tag="li" class="nav-item" to="/home">
+            <span class="nav-link">首页</span>
+          </router-link>
+          <router-link tag="li" class="nav-item" to="/about">
+            <span class="nav-link">关于我们</span>
+          </router-link>
+          <router-link tag="li" class="nav-item" to="/bussiness">
+            <span class="nav-link">业务范围</span>
+          </router-link>
+          <router-link tag="li" class="nav-item" to="/case">
+            <span class="nav-link">案例展示</span>
+          </router-link>
+          <router-link tag="li" class="nav-item" to="/contact">
+            <span class="nav-link">联系我们</span>
+          </router-link>
         </ul>
       </div>
     </div>
@@ -39,10 +39,41 @@
 
   .navbar-nav {
     .nav-item {
+      text-align: center;
+      cursor: pointer;
       .nav-link {
+        position: relative;
         font-size: $font-size-large-x;
         padding-left: 2rem;
         padding-right: 2rem;
+        display: inline-block;
+        &:after{
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          content: '';
+          width: 0;
+          height: 3px;
+          margin-bottom: -5px;
+          background-color: $background-color-base;
+          transition: all .6s;
+        }
+        &:hover {
+          color: $background-color-base;
+          &:after {
+            left: 10%;
+            width: 80%;
+          }
+        }
+      }
+      &.router-link-active {
+        .nav-link {
+          color: $background-color-base;
+          &:after {
+            left: 10%;
+            width: 80%;
+          }
+        }
       }
     }
   }

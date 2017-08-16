@@ -238,6 +238,7 @@
       .img {
         margin: 20px auto;
         border-radius: 50%;
+        max-width: 100%;
       }
       p {
         text-align: justify;
@@ -287,6 +288,7 @@
       .img {
         margin: 20px auto;
         border-radius: 50%;
+        max-width: 100%;
       }
       p {
         margin-top: 0;

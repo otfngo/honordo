@@ -69,6 +69,7 @@
   * {
     box-sizing: border-box;
     font-size: 12px;
+    word-break: break-word;
     padding: 0;
     margin: 0;
   }

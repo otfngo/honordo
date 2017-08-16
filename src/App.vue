@@ -5,11 +5,10 @@
         <span class="navbar-brand">
           <img src="./common/image/logo_top.png" width="212" height="54" alt="logo">
         </span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#/">首页</a>
@@ -68,9 +67,8 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   * {
-    -webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-size: 12px;
   }
 
   html, body {
@@ -83,6 +81,32 @@
     margin-right: 10px;
   }
 
+  .header {
+    text-align: center;
+    .en {
+      font-size: 35px;
+      text-transform: uppercase;
+      padding-top: 50px;
+    }
+
+    .zh {
+      display: inline-block;
+      position: relative;
+      font-size: 36px;
+      padding-bottom: 5px;
+      margin-bottom: 40px;
+      &:after {
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        content: '';
+        width: 50%;
+        height: 3px;
+        background-color: #1771f9;
+      }
+    }
+  }
+
   #app {
     font-family: 'Microsoft YaHei UI', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -93,6 +117,7 @@
   .navbar-nav {
     .nav-item {
       .nav-link {
+        font-size: 18px;
         padding-left: 2rem;
         padding-right: 2rem;
       }
@@ -103,7 +128,7 @@
     background-color: #2c354a;
     color: #fff;
     text-align: center;
-    margin-top:20px;
+    margin-top: 20px;
     .img {
       padding: 40px 0;
     }

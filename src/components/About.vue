@@ -9,7 +9,7 @@
         <div class="content">
           <div class="row">
             <div class="col">
-              <img src="../common/image/img_abouts.png" alt="about">
+              <img class="img" src="../common/image/img_abouts.png" alt="about">
             </div>
             <div class="col">
               <h5>公司理念</h5>
@@ -57,33 +57,6 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  .header {
-    text-align: center;
-  }
-
-  .en {
-    font-size: 35px;
-    text-transform: uppercase;
-    padding-top: 50px;
-  }
-
-  .zh {
-    display: inline-block;
-    position: relative;
-    font-size: 36px;
-    padding-bottom: 5px;
-    margin-bottom: 40px;
-    &:after {
-      position: absolute;
-      left: 25%;
-      bottom: 0;
-      content: '';
-      width: 50%;
-      height: 3px;
-      background-color: #1771f9;
-    }
-  }
-
   .about {
     background-image: url(../common/image/bg_aboutus.png);
     background-position: center;
@@ -91,7 +64,9 @@
     background-size: cover;
     .about-wrapper {
       background: rgba(255, 255, 255, 0.8);
-
+      .img {
+        max-width: 100%;
+      }
       h5 {
         color: #1771f9;
       }

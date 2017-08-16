@@ -3,20 +3,29 @@
     <div class="about">
       <div class="about-wrapper">
         <div class="container">
-          <div class="img">
-            <img src="../common/image/img_abouts.png" alt="about">
-          </div>
-          <div class="text">
-            <div class="en">about us</div>
-            <div class="zh">关于我们</div>
-            <div class="intro">
-              Parallax scrolling is a web site trend where the background content is moved at a different speed than the
-              foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere
-              mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim.
-              Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam
-              aecenas ante augue etiam maecenas, porta porttitor placerat leo.
+          <div class="row">
+            <div class="col">
+              <img class="img" src="../common/image/img_abouts.png" alt="about">
             </div>
-            <div class="more">更多</div>
+            <div class="col">
+              <div class="header">
+                <div class="en">about us</div>
+                <div class="zh">关于我们</div>
+              </div>
+              <div class="content">
+                <div class="intro">
+                  响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站
+                  响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站
+                  响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站
+                  响应式网站响应式网站响应式网站响应式网站响应响应式网站响应式
+                  网站响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站
+                  响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站
+                </div>
+                <div class="more">
+                  <a href="#/about">更多</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -36,21 +45,18 @@
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
-              <div class="col"></div>
               <div class="col">
                 <img class="img" src="../common/image/icon2_businessscope.jpg" alt="icon">
                 <h2>项目管理</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
-              <div class="col"></div>
               <div class="col">
                 <img class="img" src="../common/image/icon3_businessscope.jpg" alt="icon">
                 <h2>软件开发</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
-              <div class="col"></div>
               <div class="col">
                 <img class="img" src="../common/image/icon4_businessscope.jpg" alt="icon">
                 <h2>服务支持</h2>
@@ -173,60 +179,35 @@
 
   .about {
     background-image url("../common/image/bg_aboutus.png");
-    min-height: 711px;
-    .about-wrapper {
-      margin-top: 50px;
-      .text {
-        padding: 0 0 20px 20px;
-        .intro {
-          text-align: justify;
-        }
-      }
-    }
   }
 
   .case {
     background-image: url(../common/image/bg_successfulcase.jpg);
-    min-height: 830px
-  }
-
-  .header, .text {
-    text-align: center;
-  }
-
-  .en {
-    font-size: 35px;
-    text-transform: uppercase;
-    padding-top: 50px;
-  }
-
-  .zh {
-    display: inline-block;
-    position: relative;
-    font-size: 36px;
-    padding-bottom: 5px;
-    margin-bottom: 40px;
-    &:after {
-      position: absolute;
-      left: 25%;
-      bottom: 0;
-      content: '';
-      width: 50%;
-      height: 3px;
-      background-color: #1771f9;
-    }
   }
 
   .about-wrapper {
-    background-color: #2c354a;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.8);
     .img {
-      display: inline-block;
+      max-width: 100%;
+      padding-top: 50px;
       vertical-align: top;
     }
-    .text {
-      display: inline-block;
-      width: 50%;
-      color: #fff;
+    .content {
+      font-size:12px;
+      .intro {
+        text-align: justify;
+      }
+      .more {
+        text-align: right;
+        margin-top: 20px;
+        &:after {
+          content: '>>'
+        }
+        a {
+          color: #000;
+        }
+      }
     }
   }
 
@@ -234,6 +215,7 @@
     position: relative
     font-size: 0;
     padding: 20px 0;
+    margin-top: 200px;
     background-color: #1771f9;
     &:before {
       position: absolute;
@@ -266,6 +248,7 @@
   }
 
   .case-wrapper {
+    padding-bottom: 50px;
     .content {
       .category {
         text-align: center;
@@ -277,8 +260,9 @@
     .contact-info {
       margin-top: 60px;
       text-align: center;
-      img {
-        margin-bottom: 10px;
+      .img {
+        margin: 20px auto;
+        border-radius: 50%;
       }
       p {
         margin-top: 0;

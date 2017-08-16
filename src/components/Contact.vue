@@ -58,33 +58,6 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  .header {
-    text-align: center;
-  }
-
-  .en {
-    font-size: 35px;
-    text-transform: uppercase;
-    padding-top: 50px;
-  }
-
-  .zh {
-    display: inline-block;
-    position: relative;
-    font-size: 36px;
-    padding-bottom: 5px;
-    margin-bottom: 40px;
-    &:after {
-      position: absolute;
-      left: 25%;
-      bottom: 0;
-      content: '';
-      width: 50%;
-      height: 3px;
-      background-color: #007bff;
-    }
-  }
-
   .contact-wrapper {
     h5 {
       font-size: 16px;

@@ -36,33 +36,6 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .header {
-    text-align: center;
-  }
-
-  .en {
-    font-size: 35px;
-    text-transform: uppercase;
-    padding-top: 50px;
-  }
-
-  .zh {
-    display: inline-block;
-    position: relative;
-    font-size: 36px;
-    padding-bottom: 5px;
-    margin-bottom: 40px;
-    &:after {
-      position: absolute;
-      left: 25%;
-      bottom: 0;
-      content: '';
-      width: 50%;
-      height: 3px;
-      background-color: #007bff;
-    }
-  }
-
   .bussiness-wrapper {
     .list-group {
       .active {

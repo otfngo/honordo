@@ -4,10 +4,10 @@
       <div class="about-wrapper">
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col-sm">
               <img class="img" src="../common/image/img_abouts.png" alt="about">
             </div>
-            <div class="col">
+            <div class="col-sm">
               <div class="header">
                 <div class="en">about us</div>
                 <div class="zh">关于我们</div>
@@ -190,6 +190,7 @@
     bg-opacity(0.8);
     .img {
       max-width: 100%;
+      min-width: 160px;
       padding-top: 50px;
       vertical-align: top;
     }
@@ -199,6 +200,7 @@
         text-align: justify;
       }
       .more {
+        font-weight: normal;
         text-align: right;
         margin-top: 20px;
         &:after {
@@ -241,6 +243,7 @@
         margin: 20px auto;
         border-radius: 50%;
         max-width: 100%;
+        min-width: 100px;
       }
       p {
         text-align: justify;
@@ -291,6 +294,7 @@
         margin: 20px auto;
         border-radius: 50%;
         max-width: 100%;
+        min-width: 100px;
       }
       p {
         margin-top: 0;

@@ -8,7 +8,7 @@
         </div>
         <div class="content">
           <div class="row">
-            <div class="col">
+            <div class="col-sm">
               <div class="contact-info1">
                 <h5>找到我们很容易！</h5>
                 <p>您可以通过以下方式联系我们，或给我们留言</p>
@@ -24,7 +24,7 @@
                 <img src="../common/image/qrcode_230px.jpg" alt="二维码" width="80" height="80">
               </div>
             </div>
-            <div class="col">
+            <div class="col-sm">
               <form>
                 <div class="form-group">
                   <label for="msg-title">留言标题</label>
@@ -90,6 +90,10 @@
         height: 1px;
         background-color: $background-color-gray;
       }
+    }
+
+    .contact-info3 {
+      margin-bottom: 20px;
     }
   }
 </style>

@@ -8,10 +8,10 @@
         </div>
         <div class="content">
           <div class="row">
-            <div class="col">
+            <div class="col-sm">
               <img class="img" src="../common/image/img_abouts.png" alt="about">
             </div>
-            <div class="col">
+            <div class="col-sm">
               <h5>公司理念</h5>
               <div class="content-item">
                 <p>响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站</p>
@@ -69,6 +69,7 @@
       bg-opacity(0.8);
       .img {
         max-width: 100%;
+        margin-bottom:20px;
       }
       h5 {
         color: $background-color-base;

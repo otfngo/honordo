@@ -9,11 +9,11 @@
         <div class="content">
           <div class="row">
             <div class="col-3">
-              <ul class="list-group">
-                <li class="list-group-item active">软件开发</li>
-                <li class="list-group-item">IT系统服务</li>
-                <li class="list-group-item">项目管理</li>
-                <li class="list-group-item">服务支持</li>
+              <ul class="list-group" ref="listGroup">
+                <li class="list-group-item active" @click="handleListClick($event)">软件开发</li>
+                <li class="list-group-item" @click="handleListClick($event)">IT系统服务</li>
+                <li class="list-group-item" @click="handleListClick($event)">项目管理</li>
+                <li class="list-group-item" @click="handleListClick($event)">服务支持</li>
               </ul>
             </div>
             <div class="col">
@@ -31,7 +31,22 @@
 
 <script>
   export default {
-    name: 'bussiness'
+    name: 'bussiness',
+    mounted(){
+      this.children = this.$refs.listGroup.children;
+      for(let i = 0; i < this.children.length; i++) {
+        this.children[i].classList.remove('active');
+      }
+      this.children[0].classList.add('active');
+    },
+    methods: {
+      handleListClick(event){
+        for(let i = 0; i < this.children.length; i++) {
+          this.children[i].classList.remove('active');
+        }
+        event.currentTarget.classList.add('active');
+      }
+    }
   }
 </script>
 
@@ -40,16 +55,22 @@
 
   .bussiness-wrapper {
     .list-group {
-      .active {
-        position: relative;
-        &:after {
-          position: absolute;
-          content: '';
-          left: 100%;
-          top: 50%;
-          transform: translateY(-50%);
-          border: 10px solid transparent;
-          border-left-color: $border-color-base;
+      .list-group-item {
+        cursor: pointer;
+        &.active {
+          position: relative;
+          &:after {
+            position: absolute;
+            content: '';
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 10px solid transparent;
+            border-left-color: $border-color-base;
+          }
+        }
+        &:not(.active):hover {
+          background-color: $background-color-gray;
         }
       }
     }

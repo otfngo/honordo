@@ -9,18 +9,39 @@
         <div class="content">
           <div class="row">
             <div class="col-3">
-              <ul class="list-group" ref="listGroup">
-                <li class="list-group-item active" @click="handleListClick($event)">软件开发</li>
-                <li class="list-group-item" @click="handleListClick($event)">IT系统服务</li>
-                <li class="list-group-item" @click="handleListClick($event)">项目管理</li>
-                <li class="list-group-item" @click="handleListClick($event)">服务支持</li>
+              <ul class="list-group">
+                <li class="list-group-item" v-for="(item,index) in bussinessList" :data-index="index"
+                    :class="{active:currentIndex==index}"
+                    @click="handleListClick($event)">
+                  {{item.name}}
+                </li>
               </ul>
             </div>
             <div class="col">
-              <p>响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站响应式
-                响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站
-                响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站响应式网站
-                响应式网站</p>
+              <div class="item" v-if="currentIndex==0">
+                <p>软件开发</p>
+                <p>软件开发</p>
+                <p>软件开发</p>
+                <p>软件开发</p>
+              </div>
+              <div class="item" v-if="currentIndex==1">
+                <p>IT系统服务</p>
+                <p>IT系统服务</p>
+                <p>IT系统服务</p>
+                <p>IT系统服务</p>
+              </div>
+              <div class="item" v-if="currentIndex==2">
+                <p>项目管理</p>
+                <p>项目管理</p>
+                <p>项目管理</p>
+                <p>项目管理</p>
+              </div>
+              <div class="item" v-if="currentIndex==3">
+                <p>服务支持</p>
+                <p>服务支持</p>
+                <p>服务支持</p>
+                <p>服务支持</p>
+              </div>
             </div>
           </div>
         </div>
@@ -32,25 +53,28 @@
 <script>
   export default {
     name: 'bussiness',
-    mounted(){
-      this.children = this.$refs.listGroup.children;
-      for(let i = 0; i < this.children.length; i++) {
-        this.children[i].classList.remove('active');
+    data(){
+      return {
+        currentIndex: 0,
+        bussinessList: [
+          {id: 0, name: '软件开发'},
+          {id: 1, name: 'IT系统服务'},
+          {id: 2, name: '项目管理'},
+          {id: 3, name: '服务支持'}
+        ]
       }
-      this.children[0].classList.add('active');
+    },
+    mounted(){
     },
     methods: {
       handleListClick(event){
-        for(let i = 0; i < this.children.length; i++) {
-          this.children[i].classList.remove('active');
-        }
-        event.currentTarget.classList.add('active');
+        this.currentIndex = event.currentTarget.dataset["index"];
       }
     }
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~common/stylus/variable";
 
   .bussiness-wrapper {

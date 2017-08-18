@@ -10,9 +10,9 @@
 </template>
 
 <script>
-  import MHeader from 'components/m-header/m-header.vue';
-  import Carousel from 'components/carousel/carousel.vue';
-  import MFooter from 'components/m-footer/m-footer.vue';
+  import MHeader from 'components/m-header/m-header';
+  import Carousel from 'components/carousel/carousel';
+  import MFooter from 'components/m-footer/m-footer';
 
   export default {
     components: {

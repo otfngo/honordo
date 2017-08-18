@@ -1,12 +1,12 @@
 <template>
   <div class="bussiness">
     <div class="bussiness-wrapper">
-      <div class="container">
-        <div class="header">
-          <div class="en">bussiness scope</div>
-          <div class="zh">业务范围</div>
-        </div>
-        <div class="content">
+      <div class="header">
+        <div class="en">bussiness scope</div>
+        <div class="zh">业务范围</div>
+      </div>
+      <div class="content">
+        <div class="container">
           <div class="row">
             <div class="col-3">
               <ul class="list-group">

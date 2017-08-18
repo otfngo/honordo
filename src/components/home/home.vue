@@ -30,32 +30,33 @@
     </div>
     <div class="bussiness">
       <div class="bussiness-wrapper">
-        <div class="container">
-          <div class="header">
-            <div class="en">bussiness scope</div>
-            <div class="zh">业务范围</div>
-          </div>
-          <div class="content">
+        <div class="header">
+          <div class="en">bussiness scope</div>
+          <div class="zh">业务范围</div>
+        </div>
+        <div class="content">
+          <div class="container">
             <div class="row">
-              <div class="col">
+              <div class="col-6 col-sm-3">
                 <img class="img" src="./icon1_businessscope.jpg" alt="icon">
                 <h2>IT服务</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
-              <div class="col">
+              <div class="col-6 col-sm-3">
                 <img class="img" src="./icon2_businessscope.jpg" alt="icon">
                 <h2>项目管理</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
-              <div class="col">
+              <div class="clearfix d-none d-sm-block"></div>
+              <div class="col-6 col-sm-3">
                 <img class="img" src="./icon3_businessscope.jpg" alt="icon">
                 <h2>软件开发</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
-              <div class="col">
+              <div class="col-6 col-sm-3">
                 <img class="img" src="./icon4_businessscope.jpg" alt="icon">
                 <h2>服务支持</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
@@ -68,12 +69,12 @@
     </div>
     <div class="case">
       <div class="case-wrapper">
-        <div class="container">
-          <div class="header">
-            <div class="en">successful case</div>
-            <div class="zh">成功案例</div>
-          </div>
-          <div class="content">
+        <div class="header">
+          <div class="en">successful case</div>
+          <div class="zh">成功案例</div>
+        </div>
+        <div class="content">
+          <div class="container p-0">
             <ul class="list">
               <li class="list-item active">软件开发</li>
               <li class="list-item">IT系统服务</li>
@@ -86,48 +87,32 @@
     </div>
     <div class="contact">
       <div class="contact-wrapper">
-        <div class="container">
-          <div class="header">
-            <div class="en">contact us</div>
-            <div class="zh">联系我们</div>
-          </div>
-          <div class="content">
-            <form>
-              <div class="form-group">
-                <label for="msg-title">留言标题</label>
-                <input type="text" class="form-control" id="msg-title">
-              </div>
-              <div class="form-group">
-                <label for="msg-content">留言内容</label>
-                <textarea class="form-control" id="msg-content" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="msg-email">联系邮箱</label>
-                <input type="email" class="form-control" id="msg-email">
-              </div>
-              <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary btn-sm mr-2">提交</button>
-                <button type="reset" class="btn btn-secondary btn-sm">清空</button>
-              </div>
-            </form>
+        <div class="header">
+          <div class="en">contact us</div>
+          <div class="zh">联系我们</div>
+        </div>
+        <div class="content">
+          <div class="container">
+            <contact-form></contact-form>
             <div class="contact-info">
               <div class="row">
-                <div class="col">
+                <div class="col-6 col-sm-3">
                   <img class="img" src="./phone_contactus.png" alt="icon">
                   <p>电话</p>
                   <p>0755-2322-0387</p>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-3">
                   <img class="img" src="./email_contactus.png" alt="icon">
                   <p>邮箱</p>
                   <p>info@honordo.com</p>
                 </div>
-                <div class="col">
+                <div class="clearfix d-none d-sm-block"></div>
+                <div class="col-6 col-sm-3">
                   <img class="img" src="./fax_contactus.png" alt="icon">
                   <p>传真</p>
                   <p>0755-2322-0387</p>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-3">
                   <img class="img" src="./location_contactus.png" alt="icon">
                   <p>地址</p>
                   <p>深圳市龙华新区金龙路华富锦大厦</p>
@@ -142,8 +127,13 @@
 </template>
 
 <script>
+  import ContactForm from 'components/contact-form/contact-form';
+
   export default {
-    name: 'home'
+    name: 'home',
+    components:{
+      ContactForm
+    }
   }
 </script>
 
@@ -168,12 +158,10 @@
   }
 
   .about-wrapper {
-    margin-bottom: 5rem;
+    padding-top: 3rem;
     bg-opacity(0.8);
     .img {
       max-width: 100%;
-      min-width: 16rem;
-      padding-top: 5rem;
       vertical-align: top;
     }
     .content {
@@ -196,36 +184,29 @@
   }
 
   .bussiness-wrapper {
-    position: relative
-    font-size: 0;
-    padding: 2rem 0;
-    margin-top: 20rem;
-    background-color: $background-color-base;
-    &:before {
-      position: absolute;
-      left: 50%;
-      bottom: 100%;
-      transform: translate(-50%);
-      content: '';
-      border: 2rem solid transparent;
-      border-bottom-color: $background-color-base;
-    }
     .header {
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      transform: translate(-50%);
-      color: $text-color-black;
+      background-color: transparent;
     }
     .content {
-      font-size: $font-size-medium;
+      position: relative;
+      font-size: $font-size-base;
       text-align: center;
       color: $text-color-white;
+      padding: 2rem 0;
+      background-color: $background-color-base;
+      &:before {
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%);
+        content: '';
+        border: 2rem solid transparent;
+        border-bottom-color: $background-color-base;
+      }
       .img {
-        margin: 2rem auto;
-        border-radius: 50%;
+        margin-bottom: 2rem;
+        rounded-circle();
         max-width: 100%;
-        min-width: 100px;
       }
       p {
         text-align: justify;
@@ -234,7 +215,7 @@
   }
 
   .case-wrapper {
-    padding-bottom: 50px;
+    padding-bottom: 3rem;
     .content {
       .category {
         text-align: center;
@@ -248,9 +229,10 @@
           display: inline-block;
           padding: 0.5rem 1rem;
           margin-bottom: 0.5rem;
-          border: 0.1rem solid #555;
+          font-size: $font-size-base;
+          border: 0.1rem solid $border-color-gray;
           margin-right: -0.1rem;
-          bg-opacity(0.5);
+          bg-opacity(0.4);
           cursor: pointer;
           &.active {
             color: $text-color-white;
@@ -258,10 +240,10 @@
             background-color: $background-color-base;
           }
           &:first-child {
-            border-radius: 0.4rem 0 0 0.4rem;
+            border-radius: $border-radius-base 0 0 $border-radius-base;
           }
           &:last-child {
-            border-radius: 0 0.4rem 0.4rem 0;
+            border-radius: 0 $border-radius-base $border-radius-base 0;
           }
         }
       }
@@ -270,13 +252,12 @@
 
   .contact-wrapper {
     .contact-info {
-      margin-top: 6rem;
+      margin-top: 3rem;
       text-align: center;
       .img {
-        margin: 2rem auto;
-        border-radius: 50%;
+        margin-bottom: 2rem;
+        rounded-circle();
         max-width: 100%;
-        min-width: 100px;
       }
       p {
         margin-top: 0;

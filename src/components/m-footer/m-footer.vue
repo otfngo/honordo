@@ -1,12 +1,12 @@
 <template>
-  <div class="footer">
+  <footer class="footer">
     <div class="img">
       <img src="./qrcode_230px.jpg" alt="二维码">
     </div>
     <div class="desc">
       <p>版权所有&copy;深圳市荣和共兴科技有限公司 粤ICP备：00000000号 技术支持：荣和共兴</p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -17,7 +17,7 @@
   @import "~common/stylus/variable";
 
   .footer {
-    background-color: #2c354a;
+    background-color: $footer-bg-color;
     color: $text-color-white;
     text-align: center;
     margin-top: 2rem;

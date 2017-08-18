@@ -1,12 +1,12 @@
 <template>
   <div class="contact">
     <div class="contact-wrapper">
-      <div class="container">
-        <div class="header">
-          <div class="en">contact us</div>
-          <div class="zh">联系我们</div>
-        </div>
-        <div class="content">
+      <div class="header">
+        <div class="en">contact us</div>
+        <div class="zh">联系我们</div>
+      </div>
+      <div class="content">
+        <div class="container">
           <div class="row">
             <div class="col-sm">
               <div class="contact-info1">
@@ -25,24 +25,7 @@
               </div>
             </div>
             <div class="col-sm">
-              <form>
-                <div class="form-group">
-                  <label for="msg-title">留言标题</label>
-                  <input type="text" class="form-control" id="msg-title">
-                </div>
-                <div class="form-group">
-                  <label for="msg-content">留言内容</label>
-                  <textarea class="form-control" id="msg-content" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="msg-email">联系邮箱</label>
-                  <input type="email" class="form-control" id="msg-email">
-                </div>
-                <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn btn-primary btn-sm mr-2">提交</button>
-                  <button type="reset" class="btn btn-secondary btn-sm">清空</button>
-                </div>
-              </form>
+              <contact-form></contact-form>
             </div>
           </div>
         </div>
@@ -52,8 +35,13 @@
 </template>
 
 <script>
+  import ContactForm from 'components/contact-form/contact-form';
+
   export default {
-    name: 'contact'
+    name: 'contact',
+    components:{
+      ContactForm
+    }
   }
 </script>
 

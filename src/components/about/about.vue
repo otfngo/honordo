@@ -1,12 +1,12 @@
 <template>
   <div class="about">
     <div class="about-wrapper">
-      <div class="container">
-        <div class="header">
-          <div class="en">about us</div>
-          <div class="zh">关于我们</div>
-        </div>
-        <div class="content">
+      <div class="header">
+        <div class="en">about us</div>
+        <div class="zh">关于我们</div>
+      </div>
+      <div class="content">
+        <div class="container">
           <div class="row">
             <div class="col-sm">
               <img class="img" src="./img_abouts.png" alt="about">
@@ -69,7 +69,7 @@
       bg-opacity(0.8);
       .img {
         max-width: 100%;
-        margin-bottom:2rem;
+        margin-bottom: 2rem;
       }
       h5 {
         color: $background-color-base;

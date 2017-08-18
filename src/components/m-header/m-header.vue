@@ -47,7 +47,7 @@
         padding-left: 2rem;
         padding-right: 2rem;
         display: inline-block;
-        &:after{
+        &:after {
           position: absolute;
           left: 50%;
           bottom: 0;
@@ -56,20 +56,16 @@
           height: 0.3rem;
           margin-bottom: -0.5rem;
           background-color: $background-color-base;
-          transition: all .4s;
         }
         &:hover {
           color: $background-color-base;
-          &:after {
-            left: 10%;
-            width: 80%;
-          }
         }
       }
       &.router-link-active {
         .nav-link {
           color: $background-color-base;
           &:after {
+            transition: all .4s;
             left: 10%;
             width: 80%;
           }

@@ -106,7 +106,7 @@
                 <input type="email" class="form-control" id="msg-email">
               </div>
               <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary btn-sm m-r-10">提交</button>
+                <button type="submit" class="btn btn-primary btn-sm mr-2">提交</button>
                 <button type="reset" class="btn btn-secondary btn-sm">清空</button>
               </div>
             </form>
@@ -151,17 +151,6 @@
   @import "~common/stylus/variable";
   @import "~common/stylus/mixin";
 
-  .btn {
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
-  }
-
-  .btn-transparent {
-    background-color: transparent;
-    border: 1px solid #222;
-  }
-
   .about, .case {
     position: relative;
     background-attachment fixed;
@@ -179,12 +168,12 @@
   }
 
   .about-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
     bg-opacity(0.8);
     .img {
       max-width: 100%;
-      min-width: 160px;
-      padding-top: 50px;
+      min-width: 16rem;
+      padding-top: 5rem;
       vertical-align: top;
     }
     .content {
@@ -195,7 +184,7 @@
       .more {
         font-weight: normal;
         text-align: right;
-        margin-top: 20px;
+        margin-top: 2rem;
         &:after {
           content: '>>'
         }
@@ -209,8 +198,8 @@
   .bussiness-wrapper {
     position: relative
     font-size: 0;
-    padding: 20px 0;
-    margin-top: 200px;
+    padding: 2rem 0;
+    margin-top: 20rem;
     background-color: $background-color-base;
     &:before {
       position: absolute;
@@ -218,7 +207,7 @@
       bottom: 100%;
       transform: translate(-50%);
       content: '';
-      border: 20px solid transparent;
+      border: 2rem solid transparent;
       border-bottom-color: $background-color-base;
     }
     .header {
@@ -233,7 +222,7 @@
       text-align: center;
       color: $text-color-white;
       .img {
-        margin: 20px auto;
+        margin: 2rem auto;
         border-radius: 50%;
         max-width: 100%;
         min-width: 100px;
@@ -257,10 +246,10 @@
         margin: 0;
         .list-item {
           display: inline-block;
-          padding: 5px 10px;
-          margin-bottom: 5px;
-          border: 1px solid #555;
-          margin-right: -1px;
+          padding: 0.5rem 1rem;
+          margin-bottom: 0.5rem;
+          border: 0.1rem solid #555;
+          margin-right: -0.1rem;
           bg-opacity(0.5);
           cursor: pointer;
           &.active {
@@ -269,10 +258,10 @@
             background-color: $background-color-base;
           }
           &:first-child {
-            border-radius: 4px 0 0 4px;
+            border-radius: 0.4rem 0 0 0.4rem;
           }
           &:last-child {
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 0.4rem 0.4rem 0;
           }
         }
       }
@@ -281,10 +270,10 @@
 
   .contact-wrapper {
     .contact-info {
-      margin-top: 60px;
+      margin-top: 6rem;
       text-align: center;
       .img {
-        margin: 20px auto;
+        margin: 2rem auto;
         border-radius: 50%;
         max-width: 100%;
         min-width: 100px;

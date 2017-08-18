@@ -69,17 +69,17 @@
       bg-opacity(0.8);
       .img {
         max-width: 100%;
-        margin-bottom:20px;
+        margin-bottom:2rem;
       }
       h5 {
         color: $background-color-base;
       }
       .content-item {
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
         p {
           line-height: 1;
           font-size: $font-size-base;
-          margin: 5px 0;
+          margin: 0.5rem 0;
         }
       }
     }

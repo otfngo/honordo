@@ -53,8 +53,8 @@
           bottom: 0;
           content: '';
           width: 0;
-          height: 3px;
-          margin-bottom: -5px;
+          height: 0.3rem;
+          margin-bottom: -0.5rem;
           background-color: $background-color-base;
           transition: all .4s;
         }

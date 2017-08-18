@@ -20,13 +20,13 @@
     background-color: #2c354a;
     color: $text-color-white;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2rem;
     .img {
-      padding: 40px 0;
+      padding: 4rem 0;
     }
     .desc {
       color: $text-color-light;
-      padding-bottom: 1px;
+      padding-bottom: 0.1rem;
     }
   }
 </style>

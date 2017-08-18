@@ -40,10 +40,10 @@
         margin: 0;
         .list-item {
           display: inline-block;
-          padding: 5px 10px;
-          margin-bottom: 5px;
-          border: 1px solid #555;
-          margin-right: -1px;
+          padding: 0.5rem 1rem;
+          margin-bottom: 0.5rem;
+          border: 0.1rem solid #555;
+          margin-right: -0.1rem;
           cursor: pointer;
           &.active {
             color: $text-color-white;
@@ -51,10 +51,10 @@
             background-color: $background-color-base;
           }
           &:first-child {
-            border-radius: 4px 0 0 4px;
+            border-radius: 0.4rem 0 0 0.4rem;
           }
           &:last-child {
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 0.4rem 0.4rem 0;
           }
         }
       }

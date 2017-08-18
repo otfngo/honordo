@@ -89,7 +89,7 @@
             left: 100%;
             top: 50%;
             transform: translateY(-50%);
-            border: 10px solid transparent;
+            border: 1rem solid transparent;
             border-left-color: $border-color-base;
           }
         }

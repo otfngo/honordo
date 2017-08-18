@@ -39,7 +39,7 @@
                   <input type="email" class="form-control" id="msg-email">
                 </div>
                 <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn btn-primary btn-sm m-r-10">提交</button>
+                  <button type="submit" class="btn btn-primary btn-sm mr-2">提交</button>
                   <button type="reset" class="btn btn-secondary btn-sm">清空</button>
                 </div>
               </form>
@@ -67,33 +67,33 @@
     p {
       line-height: 1;
       font-size: $font-size-base;
-      margin: 5px 0;
+      margin: 0.5rem 0;
     }
 
     .contact-info1 {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
 
     .contact-info2 {
       position: relative;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
       h5 {
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
       }
-      padding-bottom: 10px;
+      padding-bottom: 1rem;
       &:after {
         position: absolute;
         left: 0;
         bottom: 0;
         content: '';
         width: 50%;
-        height: 1px;
+        height: 0.1rem;
         background-color: $background-color-gray;
       }
     }
 
     .contact-info3 {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
   }
 </style>

@@ -9,7 +9,7 @@
         <div class="content">
           <div class="row">
             <div class="col-sm">
-              <img class="img" src="../common/image/img_abouts.png" alt="about">
+              <img class="img" src="./img_abouts.png" alt="about">
             </div>
             <div class="col-sm">
               <h5>公司理念</h5>
@@ -61,7 +61,7 @@
   @import "~common/stylus/mixin";
 
   .about {
-    background-image: url(../common/image/bg_aboutus.png);
+    background-image: url(./bg_aboutus.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

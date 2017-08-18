@@ -5,7 +5,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm">
-              <img class="img" src="../common/image/img_abouts.png" alt="about">
+              <img class="img" src="./img_abouts.png" alt="about">
             </div>
             <div class="col-sm">
               <div class="header">
@@ -38,25 +38,25 @@
           <div class="content">
             <div class="row">
               <div class="col">
-                <img class="img" src="../common/image/icon1_businessscope.jpg" alt="icon">
+                <img class="img" src="./icon1_businessscope.jpg" alt="icon">
                 <h2>IT服务</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
               <div class="col">
-                <img class="img" src="../common/image/icon2_businessscope.jpg" alt="icon">
+                <img class="img" src="./icon2_businessscope.jpg" alt="icon">
                 <h2>项目管理</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
               <div class="col">
-                <img class="img" src="../common/image/icon3_businessscope.jpg" alt="icon">
+                <img class="img" src="./icon3_businessscope.jpg" alt="icon">
                 <h2>软件开发</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
               <div class="col">
-                <img class="img" src="../common/image/icon4_businessscope.jpg" alt="icon">
+                <img class="img" src="./icon4_businessscope.jpg" alt="icon">
                 <h2>服务支持</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
@@ -113,22 +113,22 @@
             <div class="contact-info">
               <div class="row">
                 <div class="col">
-                  <img class="img" src="../common/image/phone_contactus.png" alt="icon">
+                  <img class="img" src="./phone_contactus.png" alt="icon">
                   <p>电话</p>
                   <p>0755-2322-0387</p>
                 </div>
                 <div class="col">
-                  <img class="img" src="../common/image/email_contactus.png" alt="icon">
+                  <img class="img" src="./email_contactus.png" alt="icon">
                   <p>邮箱</p>
                   <p>info@honordo.com</p>
                 </div>
                 <div class="col">
-                  <img class="img" src="../common/image/fax_contactus.png" alt="icon">
+                  <img class="img" src="./fax_contactus.png" alt="icon">
                   <p>传真</p>
                   <p>0755-2322-0387</p>
                 </div>
                 <div class="col">
-                  <img class="img" src="../common/image/location_contactus.png" alt="icon">
+                  <img class="img" src="./location_contactus.png" alt="icon">
                   <p>地址</p>
                   <p>深圳市龙华新区金龙路华富锦大厦</p>
                 </div>
@@ -143,12 +143,7 @@
 
 <script>
   export default {
-    name: 'home',
-    data(){
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    }
+    name: 'home'
   }
 </script>
 
@@ -176,11 +171,11 @@
   }
 
   .about {
-    background-image: url("../common/image/bg_aboutus.png");
+    background-image: url("./bg_aboutus.png");
   }
 
   .case {
-    background-image: url(../common/image/bg_successfulcase.jpg);
+    background-image: url(./bg_successfulcase.jpg);
   }
 
   .about-wrapper {

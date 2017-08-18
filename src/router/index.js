@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from 'components/Home';
-import About from 'components/About';
-import Bussiness from 'components/Bussiness';
-import Case from 'components/Case';
-import Contact from 'components/Contact';
+import Home from 'components/home/home';
+import About from 'components/about/about';
+import Bussiness from 'components/bussiness/bussiness';
+import Case from 'components/case/case';
+import Contact from 'components/contact/contact';
 
 Vue.use(Router);
 

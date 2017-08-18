@@ -21,7 +21,7 @@
                 <p>邮箱：info@honordo.com</p>
               </div>
               <div class="contact-info3">
-                <img src="../common/image/qrcode_230px.jpg" alt="二维码" width="80" height="80">
+                <img src="./qrcode_230px.jpg" alt="二维码" width="80" height="80">
               </div>
             </div>
             <div class="col-sm">

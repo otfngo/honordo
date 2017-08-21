@@ -55,7 +55,7 @@
         caseList: []
       }
     },
-    mounted(){
+    created(){
       this.caseList = this._getCaseList();
     },
     methods: {

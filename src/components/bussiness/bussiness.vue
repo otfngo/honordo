@@ -59,7 +59,7 @@
         bussinessList: []
       }
     },
-    mounted(){
+    created(){
       this.bussinessList = this._getBussinessList();
     },
     methods: {

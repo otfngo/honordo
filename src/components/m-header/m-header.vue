@@ -34,7 +34,7 @@
   export default {}
 </script>
 
-<style scoped lang="stylus" rel="stylesheet/stylus">
+<style scoped lang="stylus">
   @import "~common/stylus/variable"
 
   .navbar-nav {

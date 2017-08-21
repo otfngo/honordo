@@ -163,15 +163,23 @@
     data(){
       return {
         currentIndex: 0,
-        caseList: [
+        caseList: []
+      }
+    },
+    mounted(){
+      this.caseList = this._getCaseList();
+    },
+    methods: {
+      _getCaseList(){
+        let list = [
           {id: 0, name: '软件开发'},
           {id: 1, name: 'IT系统服务'},
           {id: 2, name: '项目管理'},
           {id: 3, name: '服务支持'}
-        ]
-      }
-    },
-    methods: {
+        ];
+
+        return list;
+      },
       handleListClick(event){
         this.currentIndex = event.currentTarget.dataset["index"];
       }
@@ -179,7 +187,7 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
   @import "~common/stylus/variable";
   @import "~common/stylus/mixin";
 

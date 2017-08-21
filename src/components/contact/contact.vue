@@ -40,17 +40,12 @@
 </template>
 
 <script>
-  import ContactForm from 'components/contact-form/contact-form';
-
   export default {
-    name: 'contact',
-    components:{
-      ContactForm
-    }
+    name: 'contact'
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
   @import "~common/stylus/variable";
 
   .contact-wrapper {

@@ -56,15 +56,23 @@
     data(){
       return {
         currentIndex: 0,
-        bussinessList: [
+        bussinessList: []
+      }
+    },
+    mounted(){
+      this.bussinessList = this._getBussinessList();
+    },
+    methods: {
+      _getBussinessList(){
+        let list = [
           {id: 0, name: '软件开发'},
           {id: 1, name: 'IT系统服务'},
           {id: 2, name: '项目管理'},
           {id: 3, name: '服务支持'}
-        ]
-      }
-    },
-    methods: {
+        ];
+
+        return list;
+      },
       handleListClick(event){
         this.currentIndex = event.currentTarget.dataset["index"];
       }

@@ -8,11 +8,38 @@
       <div class="content">
         <div class="container p-0">
           <ul class="list">
-            <li class="list-item active">软件开发</li>
-            <li class="list-item">IT系统服务</li>
-            <li class="list-item">项目管理</li>
-            <li class="list-item">服务支持</li>
+            <li class="list-item" v-for="(item,index) in caseList" :data-index="index"
+                :class="{active:currentIndex==index}"
+                @click="handleListClick($event)">
+              {{item.name}}
+            </li>
           </ul>
+        </div>
+        <div class="container">
+          <div class="item" v-if="currentIndex==0">
+            <p>软件开发</p>
+            <p>软件开发</p>
+            <p>软件开发</p>
+            <p>软件开发</p>
+          </div>
+          <div class="item" v-if="currentIndex==1">
+            <p>IT系统服务</p>
+            <p>IT系统服务</p>
+            <p>IT系统服务</p>
+            <p>IT系统服务</p>
+          </div>
+          <div class="item" v-if="currentIndex==2">
+            <p>项目管理</p>
+            <p>项目管理</p>
+            <p>项目管理</p>
+            <p>项目管理</p>
+          </div>
+          <div class="item" v-if="currentIndex==3">
+            <p>服务支持</p>
+            <p>服务支持</p>
+            <p>服务支持</p>
+            <p>服务支持</p>
+          </div>
         </div>
       </div>
     </div>
@@ -21,7 +48,23 @@
 
 <script>
   export default {
-    name: 'case'
+    name: 'case',
+    data(){
+      return {
+        currentIndex: 0,
+        caseList: [
+          {id: 0, name: '软件开发'},
+          {id: 1, name: 'IT系统服务'},
+          {id: 2, name: '项目管理'},
+          {id: 3, name: '服务支持'}
+        ]
+      }
+    },
+    methods: {
+      handleListClick(event){
+        this.currentIndex = event.currentTarget.dataset["index"];
+      }
+    }
   }
 </script>
 
@@ -30,9 +73,6 @@
 
   .case-wrapper {
     .content {
-      .category {
-        text-align: center;
-      }
       .list {
         list-style: none;
         text-align: center;
@@ -56,6 +96,9 @@
           }
           &:last-child {
             border-radius: 0 $border-radius-base $border-radius-base 0;
+          }
+          &:not(.active):hover {
+            background-color: $background-color-gray;
           }
         }
       }

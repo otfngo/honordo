@@ -64,8 +64,6 @@
         ]
       }
     },
-    mounted(){
-    },
     methods: {
       handleListClick(event){
         this.currentIndex = event.currentTarget.dataset["index"];

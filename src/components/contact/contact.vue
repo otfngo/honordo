@@ -11,7 +11,7 @@
             <div class="col-sm">
               <div class="contact-info1">
                 <h5>找到我们很容易！</h5>
-                <p>您可以通过以下方式联系我们，或给我们留言</p>
+                <p>您可以通过以下方式联系我们</p>
               </div>
               <div class="contact-info2">
                 <h5>深圳市荣和共兴科技有限公司</h5>
@@ -25,7 +25,12 @@
               </div>
             </div>
             <div class="col-sm">
-              <contact-form></contact-form>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img class="img-fluid" src="./map.png" alt="map">
             </div>
           </div>
         </div>

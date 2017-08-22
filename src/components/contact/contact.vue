@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <div class="contact-wrapper">
-      <div class="header">
+      <div class="title">
         <div class="en">contact us</div>
         <div class="zh">联系我们</div>
       </div>

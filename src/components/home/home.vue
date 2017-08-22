@@ -8,7 +8,7 @@
               <img class="img" src="./img_abouts.png" alt="about">
             </div>
             <div class="col-sm">
-              <div class="header">
+              <div class="title">
                 <div class="en">about us</div>
                 <div class="zh">关于我们</div>
               </div>
@@ -30,7 +30,7 @@
     </div>
     <div class="bussiness">
       <div class="bussiness-wrapper">
-        <div class="header">
+        <div class="title">
           <div class="en">bussiness scope</div>
           <div class="zh">业务范围</div>
         </div>
@@ -69,7 +69,7 @@
     </div>
     <div class="case">
       <div class="case-wrapper">
-        <div class="header">
+        <div class="title">
           <div class="en">successful case</div>
           <div class="zh">成功案例</div>
         </div>
@@ -114,13 +114,13 @@
     </div>
     <div class="contact">
       <div class="contact-wrapper">
-        <div class="header">
+        <div class="title">
           <div class="en">contact us</div>
           <div class="zh">联系我们</div>
         </div>
         <div class="content">
-          <div class="container">
-            <div class="contact-info">
+          <div class="contact-info">
+            <div class="container">
               <div class="row">
                 <div class="col-6 col-sm-3">
                   <img class="img" src="./phone_contactus.png" alt="icon">

@@ -1,7 +1,7 @@
 <template>
   <div class="bussiness">
     <div class="bussiness-wrapper">
-      <div class="header">
+      <div class="title">
         <div class="en">bussiness scope</div>
         <div class="zh">业务范围</div>
       </div>

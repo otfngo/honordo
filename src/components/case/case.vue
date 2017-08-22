@@ -1,7 +1,7 @@
 <template>
   <div class="case">
     <div class="case-wrapper">
-      <div class="header">
+      <div class="title">
         <div class="en">successful case</div>
         <div class="zh">成功案例</div>
       </div>

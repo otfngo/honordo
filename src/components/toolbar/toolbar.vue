@@ -23,6 +23,17 @@
     mounted(){
       this.backtop = this.$refs.backtop;
       window.addEventListener("scroll", () =>{
+        this._handleBacktopBtnShowHide();
+      }, false);
+      window.addEventListener("load", () =>{
+        this._handleBacktopBtnShowHide();
+      }, false);
+    },
+    methods: {
+      handleBacktopClick(){
+        document.body.scrollTop = 0;
+      },
+      _handleBacktopBtnShowHide(){
         let scrollTop = document.body.scrollTop,
           clientHeight = document.body.clientHeight;
         if(scrollTop > clientHeight / 2) {
@@ -30,11 +41,6 @@
         } else {
           this.backtop.style.display = "none";
         }
-      }, false);
-    },
-    methods: {
-      handleBacktopClick(){
-        document.body.scrollTop = 0;
       }
     }
   }

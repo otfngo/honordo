@@ -1,4 +1,28 @@
-@import "variable.styl"
+@import "variable.styl";
+
+@font-face {
+  font-family: 'ty-icomoon';
+  src: url($icomoon-font-path + '/ty-icomoon.eot?2uro55');
+  src: url($icomoon-font-path + '/ty-icomoon.eot?2uro55#iefix') format('embedded-opentype'),
+    url($icomoon-font-path + '/ty-icomoon.ttf?2uro55') format('truetype'),
+    url($icomoon-font-path + '/ty-icomoon.woff?2uro55') format('woff'),
+    url($icomoon-font-path + '/ty-icomoon.svg?2uro55#ty-icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ty-icon-"], [class*=" ty-icon-"] {
+  font-family: 'ty-icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .title {
   text-align: center;

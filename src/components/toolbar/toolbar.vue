@@ -1,0 +1,130 @@
+<template>
+  <div class="d-none d-sm-block">
+    <div class="toolbar">
+      <a class="toolbar-item">
+        <span class="toolbar-btn">
+          <i class="toolbar-icon ty-icon-wechat"></i>
+          <span class="toolbar-text">公众<br/>账号</span>
+        </span>
+        <span class="toolbar-layer toolbar-layer-weixin"></span>
+      </a>
+      <a ref="backtop" class="toolbar-item" @click="handleBacktopClick">
+        <span class="toolbar-btn">
+          <i class="toolbar-icon ty-icon-arrow-up2"></i>
+          <span class="toolbar-text">返回<br/>顶部</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    mounted(){
+      this.backtop = this.$refs.backtop;
+      window.addEventListener("scroll", () =>{
+        let scrollTop = document.body.scrollTop,
+          clientHeight = document.body.clientHeight;
+        if(scrollTop > clientHeight / 2) {
+          this.backtop.style.display = "block";
+        } else {
+          this.backtop.style.display = "none";
+        }
+      }, false);
+    },
+    methods: {
+      handleBacktopClick(){
+        document.body.scrollTop = 0;
+      }
+    }
+  }
+</script>
+
+<style scoped lang="stylus">
+  @import "~common/stylus/variable";
+
+  .ty-icon-wechat {
+    &:before {
+      content: $ty-icon-wechat;
+    }
+  }
+
+  .ty-icon-arrow-up2 {
+    &:before {
+      content: $ty-icon-arrow-up2;
+    }
+  }
+
+  .toolbar {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+
+    .toolbar-item, .toolbar-btn, .toolbar-icon, .toolbar-text {
+      width: $toolbar-size;
+      height: $toolbar-size;
+    }
+
+    .toolbar-item {
+      position: relative;
+      display: block;
+      margin-top: 0.1rem;
+      &:hover {
+        .toolbar-btn {
+          .toolbar-icon {
+            top: -$toolbar-size;
+          }
+          .toolbar-text {
+            top: 0;
+          }
+        }
+        .toolbar-layer {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .toolbar-btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        .toolbar-icon, .toolbar-text {
+          position: absolute;
+          left: 0;
+          color: $text-color-white;
+          text-align: center;
+          transition: top 1s;
+          background-color: $backgrouond-color-darkgray;
+        }
+        .toolbar-icon {
+          top: 0;
+          font-size: $font-size-large-x;
+          line-height: $toolbar-size;
+        }
+        .toolbar-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          top: $toolbar-size;
+          font-size: $font-size-medium;
+        }
+      }
+      .toolbar-layer {
+        position: absolute;
+        right: $toolbar-size - 0.6;
+        bottom: -1rem;
+        width: 240px;
+        height: 240px;
+        opacity: 0;
+        transform-origin: 95% 95%;
+        transform: scale(0);
+        transition: opacity 1s, transform 1s;
+        &.toolbar-layer-weixin {
+          background-image: url(./qrcode_230px.jpg);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+</style>

@@ -153,13 +153,8 @@
 </template>
 
 <script>
-  import ContactForm from 'components/contact-form/contact-form';
-
   export default {
     name: 'home',
-    components: {
-      ContactForm
-    },
     data(){
       return {
         currentIndex: 0,

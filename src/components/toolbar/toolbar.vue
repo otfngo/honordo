@@ -36,9 +36,10 @@
     methods: {
       handleBacktopClick(){
         document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       },
       _handleBacktopBtnShowHide(){
-        let scrollTop = document.body.scrollTop;
+        let scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
         if(scrollTop > 200) {
           this.backtopShow = true;
         } else {

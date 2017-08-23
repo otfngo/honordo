@@ -243,7 +243,7 @@
         position: absolute;
         left: 50%;
         bottom: 100%;
-        transform: translate3d(-50%, 0, 0);
+        transform: translateX(-50%) translateZ(0);
         content: '';
         border: 2rem solid transparent;
         border-bottom-color: $background-color-base;

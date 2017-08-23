@@ -89,7 +89,7 @@
         }
         .toolbar-layer {
           opacity: 1;
-          transform: scale(1);
+          transform: scale(1) translateZ(0);
         }
       }
       .toolbar-btn {
@@ -126,7 +126,7 @@
         height: 240px;
         opacity: 0;
         transform-origin: 95% 95%;
-        transform: scale(0);
+        transform: scale(0) translateZ(0);
         transition: opacity 1s, transform 1s;
         &.toolbar-layer-weixin {
           background-image: url(./qrcode_230px.jpg);

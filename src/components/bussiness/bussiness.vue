@@ -94,7 +94,7 @@
             content: '';
             left: 100%;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translate3d(0, -50%, 0);
             border: 1rem solid transparent;
             border-left-color: $border-color-base;
           }

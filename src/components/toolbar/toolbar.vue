@@ -8,7 +8,7 @@
         </span>
         <span class="toolbar-layer toolbar-layer-weixin"></span>
       </a>
-      <a ref="backtop" class="toolbar-item" @click="handleBacktopClick">
+      <a v-show="backtopShow==true" class="toolbar-item" @click="handleBacktopClick">
         <span class="toolbar-btn">
           <i class="toolbar-icon ty-icon-arrow-up2"></i>
           <span class="toolbar-text">返回<br/>顶部</span>
@@ -20,8 +20,12 @@
 
 <script>
   export default {
+    data(){
+      return {
+        backtopShow: false
+      }
+    },
     mounted(){
-      this.backtop = this.$refs.backtop;
       window.addEventListener("scroll", () =>{
         this._handleBacktopBtnShowHide();
       }, false);
@@ -34,12 +38,11 @@
         document.body.scrollTop = 0;
       },
       _handleBacktopBtnShowHide(){
-        let scrollTop = document.body.scrollTop,
-          clientHeight = document.body.clientHeight;
-        if(scrollTop > clientHeight / 2) {
-          this.backtop.style.display = "block";
+        let scrollTop = document.body.scrollTop;
+        if(scrollTop > 200) {
+          this.backtopShow = true;
         } else {
-          this.backtop.style.display = "none";
+          this.backtopShow = false;
         }
       }
     }

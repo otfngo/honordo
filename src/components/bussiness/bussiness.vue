@@ -63,6 +63,9 @@
       this.bussinessList = this._getBussinessList();
     },
     methods: {
+      handleListClick(event){
+        this.currentIndex = event.currentTarget.dataset["index"];
+      },
       _getBussinessList(){
         let list = [
           {id: 0, name: '软件开发'},
@@ -72,9 +75,6 @@
         ];
 
         return list;
-      },
-      handleListClick(event){
-        this.currentIndex = event.currentTarget.dataset["index"];
       }
     }
   }

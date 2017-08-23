@@ -165,6 +165,9 @@
       this.caseList = this._getCaseList();
     },
     methods: {
+      handleListClick(event){
+        this.currentIndex = event.currentTarget.dataset["index"];
+      },
       _getCaseList(){
         let list = [
           {id: 0, name: '软件开发'},
@@ -174,9 +177,6 @@
         ];
 
         return list;
-      },
-      handleListClick(event){
-        this.currentIndex = event.currentTarget.dataset["index"];
       }
     }
   }

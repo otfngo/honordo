@@ -38,26 +38,26 @@
           <div class="container">
             <div class="row">
               <div class="col-6 col-sm-3">
-                <img class="img" src="./icon1_businessscope.jpg" alt="icon">
+                <i class="ty-icon-icon1_businessscope"></i>
                 <h2>IT服务</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
               <div class="col-6 col-sm-3">
-                <img class="img" src="./icon2_businessscope.jpg" alt="icon">
+                <i class="ty-icon-icon2_businessscope"></i>
                 <h2>项目管理</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
               <div class="clearfix d-none d-sm-block"></div>
               <div class="col-6 col-sm-3">
-                <img class="img" src="./icon3_businessscope.jpg" alt="icon">
+                <i class="ty-icon-icon3_businessscope"></i>
                 <h2>软件开发</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
               </div>
               <div class="col-6 col-sm-3">
-                <img class="img" src="./icon4_businessscope.jpg" alt="icon">
+                <i class="ty-icon-icon4_businessscope"></i>
                 <h2>服务支持</h2>
                 <p>响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应式网站建设响应
                   式网站建设响应式网站建设响应</p>
@@ -123,23 +123,23 @@
             <div class="container">
               <div class="row">
                 <div class="col-6 col-sm-3">
-                  <img class="img" src="./phone_contactus.png" alt="icon">
+                  <i class="ty-icon-phone_contactus"></i>
                   <p>电话</p>
                   <p>0755-2322-0387</p>
                 </div>
                 <div class="col-6 col-sm-3">
-                  <img class="img" src="./email_contactus.png" alt="icon">
+                  <i class="ty-icon-email_contactus"></i>
                   <p>邮箱</p>
                   <p>info@honordo.com</p>
                 </div>
                 <div class="clearfix d-none d-sm-block"></div>
                 <div class="col-6 col-sm-3">
-                  <img class="img" src="./fax_contactus.png" alt="icon">
+                  <i class="ty-icon-fax_contactus"></i>
                   <p>传真</p>
                   <p>0755-2322-0387</p>
                 </div>
                 <div class="col-6 col-sm-3">
-                  <img class="img" src="./location_contactus.png" alt="icon">
+                  <i class="ty-icon-location_contactus"></i>
                   <p>地址</p>
                   <p>深圳市龙华新区金龙路华富锦大厦</p>
                 </div>
@@ -185,6 +185,57 @@
 <style lang="stylus" scoped>
   @import "~common/stylus/variable";
   @import "~common/stylus/mixin";
+
+  icon_businessscope()
+    display inline-block
+    font-size 66px
+    width 100px
+    height 100px
+    line-height 100px
+    text-align center
+    border-radius 50%
+    margin-bottom 15px
+    background-color #fff
+
+  [class^="ty-icon-"], [class*=" ty-icon-"] {
+    font-size:10rem;
+    color: $text-color-base;
+  }
+
+  .ty-icon-email_contactus
+    &:before
+      content $ty-icon-email_contactus
+  .ty-icon-fax_contactus
+    &:before
+      content $ty-icon-fax_contactus
+  .ty-icon-icon1_businessscope
+    icon_businessscope()
+    &:before
+      content $ty-icon-icon1_businessscope
+  .ty-icon-icon2_businessscope
+    icon_businessscope()
+    &:before
+      content $ty-icon-icon2_businessscope
+  .ty-icon-icon3_businessscope
+    icon_businessscope()
+    &:before
+      content $ty-icon-icon3_businessscope
+  .ty-icon-icon4_businessscope
+    icon_businessscope()
+    &:before
+      content $ty-icon-icon4_businessscope
+  .ty-icon-location_contactus
+    &:before
+      content $ty-icon-location_contactus
+  .ty-icon-phone_contactus
+    &:before
+      content $ty-icon-phone_contactus
+  .ty-icon-wechat
+    &:before
+      content $ty-icon-wechat
+  .ty-icon-arrow-up2
+    &:before
+      content $ty-icon-arrow-up2
 
   .about, .case {
     position: relative;

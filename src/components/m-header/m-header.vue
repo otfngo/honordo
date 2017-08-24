@@ -9,20 +9,8 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <router-link tag="li" class="nav-item" to="/home">
-            <span class="nav-link">首页</span>
-          </router-link>
-          <router-link tag="li" class="nav-item" to="/about">
-            <span class="nav-link">关于我们</span>
-          </router-link>
-          <router-link tag="li" class="nav-item" to="/bussiness">
-            <span class="nav-link">业务范围</span>
-          </router-link>
-          <router-link tag="li" class="nav-item" to="/case">
-            <span class="nav-link">案例展示</span>
-          </router-link>
-          <router-link tag="li" class="nav-item" to="/contact">
-            <span class="nav-link">联系我们</span>
+          <router-link tag="li" class="nav-item" v-for="(item,index) in navList" :key="index" :to="item.to">
+            <span class="nav-link">{{item.name}}</span>
           </router-link>
         </ul>
       </div>
@@ -31,7 +19,29 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    data(){
+      return {
+        navList: []
+      }
+    },
+    created(){
+      this.navList = this._getNavList();
+    },
+    methods: {
+      _getNavList(){
+        let list = [
+          {name: '首页', to: '/home'},
+          {name: '关于我们', to: '/about'},
+          {name: '业务范围', to: '/bussiness'},
+          {name: '案例展示', to: '/case'},
+          {name: '联系我们', to: '/contact'}
+        ];
+
+        return list;
+      }
+    }
+  }
 </script>
 
 <style scoped lang="stylus">

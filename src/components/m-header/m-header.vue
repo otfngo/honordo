@@ -38,36 +38,33 @@
   @import "~common/stylus/variable"
 
   .navbar-nav {
+    flex-direction: row;
     .nav-item {
       text-align: center;
       cursor: pointer;
+      margin-left: 0;
+      margin-right: 2rem;
       .nav-link {
         position: relative;
         font-size: $font-size-large-x;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 0;
+        padding-right: 0;
         display: inline-block;
-        &:after {
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          content: '';
-          width: 0;
-          height: 0.3rem;
-          margin-bottom: -0.5rem;
-          background-color: $background-color-base;
-        }
         &:hover {
-          color: $background-color-base;
+          color: $text-color-base;
         }
       }
       &.router-link-active {
         .nav-link {
-          color: $background-color-base;
+          color: $text-color-base;
           &:after {
-            transition: all .4s;
-            left: 10%;
-            width: 80%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: 0.2rem;
+            background-color: $background-color-base;
           }
         }
       }

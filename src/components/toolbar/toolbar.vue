@@ -35,11 +35,16 @@
     },
     methods: {
       handleBacktopClick(){
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        let timer = setInterval(() =>{
+          if(document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0) {
+            clearInterval(timer);
+          }
+          document.body.scrollTop = Math.floor(document.body.scrollTop / 2);
+          document.documentElement.scrollTop = Math.floor(document.documentElement.scrollTop / 2);
+        }, 10)
       },
       _handleBacktopBtnShowHide(){
-        let scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+        let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         if(scrollTop > 200) {
           this.backtopShow = true;
         } else {
@@ -82,7 +87,7 @@
       &:hover {
         .toolbar-btn {
           .toolbar-icon {
-            top: -$toolbar-size;
+            top: - $toolbar-size;
           }
           .toolbar-text {
             top: 0;

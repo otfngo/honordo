@@ -135,7 +135,7 @@
         transform: scale(0) translateZ(0);
         transition: opacity 1s, transform 1s;
         &.toolbar-layer-weixin {
-          background-image: url(./qrcode_230px.jpg);
+          background-image: url(../../common/image/qrcode_230.jpg);
           background-repeat: no-repeat;
           background-position: 0 0;
         }

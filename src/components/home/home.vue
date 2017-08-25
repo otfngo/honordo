@@ -76,7 +76,7 @@
         <div class="content">
           <div class="container p-0">
             <ul class="list">
-              <li class="list-item" v-for="(item,index) in caseList" :data-index="index"
+              <li class="list-item" v-for="(item,index) in caseList" :key="index" :data-index="index"
                   :class="{active:currentIndex==index}"
                   @click="handleListClick($event)">
                 {{item.name}}
@@ -170,10 +170,10 @@
       },
       _getCaseList(){
         let list = [
-          {id: 0, name: '软件开发'},
-          {id: 1, name: 'IT系统服务'},
-          {id: 2, name: '项目管理'},
-          {id: 3, name: '服务支持'}
+          {name: '软件开发'},
+          {name: 'IT系统服务'},
+          {name: '项目管理'},
+          {name: '服务支持'}
         ];
 
         return list;

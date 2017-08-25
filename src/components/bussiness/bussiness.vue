@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-3">
               <ul class="list-group">
-                <li class="list-group-item" v-for="(item,index) in bussinessList" :data-index="index"
+                <li class="list-group-item" v-for="(item,index) in bussinessList" :key="index" :data-index="index"
                     :class="{active:currentIndex==index}"
                     @click="handleListClick($event)">
                   {{item.name}}
@@ -68,10 +68,10 @@
       },
       _getBussinessList(){
         let list = [
-          {id: 0, name: '软件开发'},
-          {id: 1, name: 'IT系统服务'},
-          {id: 2, name: '项目管理'},
-          {id: 3, name: '服务支持'}
+          {name: '软件开发'},
+          {name: 'IT系统服务'},
+          {name: '项目管理'},
+          {name: '服务支持'}
         ];
 
         return list;

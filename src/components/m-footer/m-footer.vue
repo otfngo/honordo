@@ -1,16 +1,46 @@
 <template>
   <footer class="footer">
-    <div class="img">
-      <img src="../../common/image/qrcode_230.jpg" alt="二维码">
-    </div>
-    <div class="desc">
-      <p>版权所有&copy;深圳市荣和共兴科技有限公司 粤ICP备：00000000号 技术支持：荣和共兴</p>
+    <div class="container">
+      <div class="img text-center">
+        <img src="../../common/image/qrcode_230.jpg" alt="二维码">
+      </div>
+      <div class="d-flex justify-content-start">
+        <div class="desc">
+          <p>版权所有&copy;深圳市荣和共兴科技有限公司 粤ICP备：00000000号 技术支持：荣和共兴</p>
+        </div>
+        <div class="ml-auto">
+          <button class="btn btn-link btn-dark" v-if="lang!=='zh'" @click="handleLanguageClick('zh')">中文简体</button>
+          <button class="btn btn-link btn-dark" v-else-if="lang!=='en'" @click="handleLanguageClick('en')">English</button>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
 
 <script>
-  export default {}
+  import {mapMutations, mapGetters} from 'vuex'
+
+  export default {
+    computed: {
+      ...mapGetters([
+        'lang'
+      ])
+    },
+    methods: {
+      handleLanguageClick(lang){
+        if(lang === 'zh') {
+          console.log(this.$route)
+          this.$router.push('/home')
+        } else if(lang === 'en') {
+          console.log(this.$route)
+          this.$router.push('/en/home')
+        }
+      },
+      ...mapMutations({
+        setLang: 'SET_LANG'
+      })
+    }
+  }
 </script>
 
 <style scoped lang="stylus">
@@ -18,15 +48,19 @@
 
   .footer {
     background-color: $footer-bg-color;
-    color: $text-color-white;
-    text-align: center;
+    color: $text-color-light;
+    padding-top: 2rem;
     margin-top: 2rem;
     .img {
-      padding: 4rem 0;
+      margin-bottom: 2rem;
     }
-    .desc {
+
+    .btn-link{
       color: $text-color-light;
-      padding-bottom: 0.1rem;
+      cursor: pointer;
+      &:hover{
+        text-decoration underline
+      }
     }
   }
 </style>

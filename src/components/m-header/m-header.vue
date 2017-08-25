@@ -9,8 +9,8 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <router-link tag="li" class="nav-item" v-for="(item,index) in navList" :key="index" :to="item.to">
-            <span class="nav-link">{{item.name}}</span>
+          <router-link tag="li" class="nav-item" v-for="(item,index) in curNavData.items" :key="index" :to="item.to">
+            <span class="nav-link text-uppercase">{{item.name}}</span>
           </router-link>
         </ul>
       </div>
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
+
   export default {
     data(){
       return {
@@ -26,17 +28,35 @@
       }
     },
     created(){
-      this.navList = this._getNavList();
+      this.navList = this._getNavList()
+    },
+    computed: {
+      curNavData(){
+        return this.navList.find(item => item.lang === this.lang)
+      },
+      ...mapGetters([
+        'lang'
+      ])
     },
     methods: {
       _getNavList(){
-        let list = [
-          {name: '首页', to: '/home'},
-          {name: '关于我们', to: '/about'},
-          {name: '业务范围', to: '/bussiness'},
-          {name: '案例展示', to: '/case'},
-          {name: '联系我们', to: '/contact'}
-        ];
+        let list = [{
+          lang: 'zh', items: [
+            {name: '首页', to: '/home'},
+            {name: '关于我们', to: '/about-us'},
+            {name: '业务范围', to: '/bussiness-scope'},
+            {name: '案例展示', to: '/successful-case'},
+            {name: '联系我们', to: '/contact-us'}
+          ]
+        }, {
+          lang: 'en', items: [
+            {name: 'home', to: '/en/home'},
+            {name: 'about us', to: '/en/about-us'},
+            {name: 'bussiness scope', to: '/en/bussiness-scope'},
+            {name: 'successful case', to: '/en/successful-case'},
+            {name: 'contact us', to: '/en/contact-us'}
+          ]
+        }];
 
         return list;
       }
@@ -48,9 +68,8 @@
   @import "~common/stylus/variable"
 
   .navbar-nav {
-    flex-direction: row;
     .nav-item {
-      text-align: center;
+      text-align: left;
       cursor: pointer;
       margin-left: 0;
       margin-right: 2rem;

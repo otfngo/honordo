@@ -74,6 +74,11 @@
     position: fixed;
     right: 1rem;
     bottom: 1rem;
+    background-color: rgba(136, 136, 136, .2);
+    transition: background-color 0.4s;
+    &:hover {
+      background-color: rgba(136, 136, 136, 1);
+    }
 
     .toolbar-item, .toolbar-btn, .toolbar-icon, .toolbar-text {
       width: $toolbar-size;
@@ -83,7 +88,9 @@
     .toolbar-item {
       position: relative;
       display: block;
-      margin-top: 0.1rem;
+      &:not(:first-child) {
+        border-top: 0.1rem solid $border-color-gray;
+      }
       &:hover {
         .toolbar-btn {
           .toolbar-icon {
@@ -109,7 +116,7 @@
           color: $text-color-white;
           text-align: center;
           transition: top 1s;
-          background-color: $backgrouond-color-darkgray;
+          /*background-color: $backgrouond-color-darkgray;*/
         }
         .toolbar-icon {
           top: 0;

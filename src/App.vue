@@ -11,12 +11,39 @@
 </template>
 
 <script>
-  import MHeader from 'components/m-header/m-header';
-  import Carousel from 'components/carousel/carousel';
-  import MFooter from 'components/m-footer/m-footer';
-  import Toolbar from 'components/toolbar/toolbar';
+  import MHeader from 'components/m-header/m-header'
+  import Carousel from 'components/carousel/carousel'
+  import MFooter from 'components/m-footer/m-footer'
+  import Toolbar from 'components/toolbar/toolbar'
+  import {mapMutations} from 'vuex'
+
+  const DEFAULT_LANGUAGE = 'zh'
+  const LANGUAGE_LIST = ['zh', 'en']
 
   export default {
+    created(){
+      this.fetchLang();
+    },
+    watch: {
+      '$route': 'fetchLang'
+    },
+    methods: {
+      fetchLang(){
+        let language = this.$route.params.lang
+
+        if(!language || !LANGUAGE_LIST.includes(language)) {
+          language = DEFAULT_LANGUAGE
+        }
+
+        if(this.lang !== language) {
+          this.lang = language
+          this.setLang(language)
+        }
+      },
+      ...mapMutations({
+        setLang: 'SET_LANG'
+      })
+    },
     components: {
       MHeader,
       Carousel,

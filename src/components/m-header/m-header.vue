@@ -8,7 +8,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" :class="{'navbar-nav-row':lang==='zh'}">
           <router-link tag="li" class="nav-item" v-for="(item,index) in curNavData.items" :key="index" :to="item.to">
             <span class="nav-link text-uppercase">{{item.name}}</span>
           </router-link>
@@ -68,6 +68,9 @@
   @import "~common/stylus/variable"
 
   .navbar-nav {
+    &.navbar-nav-row {
+      flex-direction: row;
+    }
     .nav-item {
       text-align: left;
       cursor: pointer;

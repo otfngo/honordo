@@ -8,9 +8,10 @@
         <div class="desc">
           <p>版权所有&copy;深圳市荣和共兴科技有限公司 粤ICP备：00000000号 技术支持：荣和共兴</p>
         </div>
-        <div class="ml-auto">
+        <div class="ml-auto mr-5">
           <button class="btn btn-link btn-dark" v-if="lang!=='zh'" @click="handleLanguageClick('zh')">中文简体</button>
-          <button class="btn btn-link btn-dark" v-else-if="lang!=='en'" @click="handleLanguageClick('en')">English</button>
+          <button class="btn btn-link btn-dark" v-else-if="lang!=='en'" @click="handleLanguageClick('en')">English
+          </button>
         </div>
       </div>
     </div>
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-  import {mapMutations, mapGetters} from 'vuex'
+  import {mapGetters} from 'vuex'
 
   export default {
     computed: {
@@ -29,16 +30,11 @@
     methods: {
       handleLanguageClick(lang){
         if(lang === 'zh') {
-          console.log(this.$route)
           this.$router.push('/home')
         } else if(lang === 'en') {
-          console.log(this.$route)
           this.$router.push('/en/home')
         }
-      },
-      ...mapMutations({
-        setLang: 'SET_LANG'
-      })
+      }
     }
   }
 </script>
@@ -55,10 +51,10 @@
       margin-bottom: 2rem;
     }
 
-    .btn-link{
+    .btn-link {
       color: $text-color-light;
       cursor: pointer;
-      &:hover{
+      &:hover {
         text-decoration underline
       }
     }

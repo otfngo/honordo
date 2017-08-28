@@ -31,7 +31,7 @@
       fetchLang(){
         let language = this.$route.params.lang
 
-        if(!language || !LANGUAGE_LIST.includes(language)) {
+        if(LANGUAGE_LIST.includes(language) === false) {
           language = DEFAULT_LANGUAGE
         }
 

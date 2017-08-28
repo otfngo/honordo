@@ -22,17 +22,9 @@
   import {mapGetters} from 'vuex'
 
   export default {
-    data(){
-      return {
-        navList: []
-      }
-    },
-    created(){
-      this.navList = this._getNavList()
-    },
     computed: {
       curNavData(){
-        return this.navList.find(item => item.lang === this.lang)
+        return this._getNavList().find(item => item.lang === this.lang)
       },
       ...mapGetters([
         'lang'

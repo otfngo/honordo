@@ -124,24 +124,24 @@
               <div class="row">
                 <div class="col-6 col-sm-3">
                   <i class="ty-icon-phone_contactus"></i>
-                  <p>电话</p>
-                  <p>0755-2322-0387</p>
+                  <p>{{contactInfo.phone.name}}</p>
+                  <p>{{contactInfo.phone.value}}</p>
                 </div>
                 <div class="col-6 col-sm-3">
                   <i class="ty-icon-email_contactus"></i>
-                  <p>邮箱</p>
-                  <p>info@honordo.com</p>
+                  <p>{{contactInfo.email.name}}</p>
+                  <p>{{contactInfo.email.value}}</p>
                 </div>
                 <div class="clearfix d-none d-sm-block"></div>
                 <div class="col-6 col-sm-3">
                   <i class="ty-icon-fax_contactus"></i>
-                  <p>传真</p>
-                  <p>0755-2322-0387</p>
+                  <p>{{contactInfo.fax.name}}</p>
+                  <p>{{contactInfo.fax.value}}</p>
                 </div>
                 <div class="col-6 col-sm-3">
                   <i class="ty-icon-location_contactus"></i>
-                  <p>地址</p>
-                  <p>深圳市龙华新区金龙路华富锦大厦</p>
+                  <p>{{contactInfo.address.name}}</p>
+                  <p>{{contactInfo.address.value}}</p>
                 </div>
               </div>
             </div>
@@ -153,6 +153,8 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
+
   export default {
     name: 'home',
     data(){
@@ -162,7 +164,15 @@
       }
     },
     created(){
-      this.caseList = this._getCaseList();
+      this.caseList = this._getCaseList()
+    },
+    computed: {
+      contactInfo(){
+        return this._getContactData().find(value => value.lang === this.lang).items
+      },
+      ...mapGetters([
+        'lang'
+      ])
     },
     methods: {
       handleListClick(event){
@@ -177,6 +187,32 @@
         ];
 
         return list;
+      },
+      _getContactData(){
+        let list = [
+          {
+            lang: 'zh',
+            items: {
+              phone: {name: '电话', value: '0755-2322-0387'},
+              email: {name: '邮箱', value: 'info@honordo.com'},
+              fax: {name: '传真', value: '0755-2322-0387'},
+              address: {name: '地址', value: '深圳市龙华新区金龙路华富锦大厦'}
+            }
+          },
+          {
+            lang: 'en',
+            items: {
+              phone: {name: 'Tel', value: '0755-2322-0387'},
+              email: {name: 'Email', value: 'info@honordo.com'},
+              fax: {name: 'Fax', value: '0755-2322-0387'},
+              address: {
+                name: 'Address', value: 'Huafujin Building, Jinlong Road, Longhua New District, Shenzhen, China',
+              }
+            }
+          }
+        ]
+
+        return list
       }
     }
   }
@@ -186,53 +222,51 @@
   @import "~common/stylus/variable";
   @import "~common/stylus/mixin";
 
-  icon_businessscope()
-    display inline-block
-    font-size 66px
-    width 100px
-    height 100px
-    line-height 100px
-    text-align center
-    border-radius 50%
-    margin-bottom 15px
-    background-color #fff
-
   [class^="ty-icon-"], [class*=" ty-icon-"] {
-    font-size:10rem;
+    font-size: 10rem;
     color: $text-color-base;
   }
 
   .ty-icon-email_contactus
     &:before
       content $ty-icon-email_contactus
+
   .ty-icon-fax_contactus
     &:before
       content $ty-icon-fax_contactus
+
   .ty-icon-icon1_businessscope
     icon_businessscope()
     &:before
       content $ty-icon-icon1_businessscope
+
   .ty-icon-icon2_businessscope
     icon_businessscope()
     &:before
       content $ty-icon-icon2_businessscope
+
   .ty-icon-icon3_businessscope
     icon_businessscope()
     &:before
       content $ty-icon-icon3_businessscope
+
   .ty-icon-icon4_businessscope
     icon_businessscope()
     &:before
       content $ty-icon-icon4_businessscope
+
   .ty-icon-location_contactus
     &:before
       content $ty-icon-location_contactus
+
   .ty-icon-phone_contactus
     &:before
       content $ty-icon-phone_contactus
+
   .ty-icon-wechat
     &:before
       content $ty-icon-wechat
+
   .ty-icon-arrow-up2
     &:before
       content $ty-icon-arrow-up2

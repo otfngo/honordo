@@ -16,9 +16,7 @@
   import MFooter from 'components/m-footer/m-footer'
   import Toolbar from 'components/toolbar/toolbar'
   import {mapMutations} from 'vuex'
-
-  const DEFAULT_LANGUAGE = 'zh'
-  const LANGUAGE_LIST = ['zh', 'en']
+  import {DEFAULT_LANGUAGE,LANGUAGE_LIST} from 'api/config'
 
   export default {
     created(){
@@ -29,9 +27,10 @@
     },
     methods: {
       fetchLang(){
-        let language = this.$route.params.lang
+        let language = this.$route.params.lang,
+          languages=LANGUAGE_LIST.map(value=>value.lang)
 
-        if(LANGUAGE_LIST.includes(language) === false) {
+        if(languages.includes(language) === false) {
           language = DEFAULT_LANGUAGE
         }
 

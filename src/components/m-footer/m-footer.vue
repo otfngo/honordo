@@ -70,7 +70,7 @@
           {
             lang: 'en',
             items: {
-              content: 'Copyright&copy;Shenzhen Ronghe Gongxing Technology Co.,Ltd ICP：00000000 Technical Support：Ronghe Gongxing'
+              content: 'Copyright&copy;Shenzhen Ronghe Gongxing Technology Co.,Ltd ICP:00000000 Technical Support：Ronghe Gongxing'
             }
           }
         ]

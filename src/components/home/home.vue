@@ -20,7 +20,7 @@
                     公司本着“客户至上、以人为本”的原则，致力于帮助企业通过互联网持续创造企业的价值最大化！公司感谢新老客户一直以来的大力支持和信任，我们将再接再厉，与全球企业一起共同成长，相融共生，共创美好未来。</p>
                 </div>
                 <div class="more">
-                  <a href="#/about">更多</a>
+                  <a :href="aboutLink">更多</a>
                 </div>
               </div>
             </div>
@@ -154,6 +154,7 @@
 
 <script>
   import {mapGetters} from 'vuex'
+  import {LANGUAGE_LIST} from 'api/config'
 
   export default {
     name: 'home',
@@ -169,6 +170,10 @@
     computed: {
       contactInfo(){
         return this._getContactData().find(value => value.lang === this.lang).items
+      },
+      aboutLink(){
+        let link = LANGUAGE_LIST.find(value => value.lang === this.lang).aboutLink
+        return `#/${link}`
       },
       ...mapGetters([
         'lang'

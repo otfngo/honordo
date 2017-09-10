@@ -35,13 +35,15 @@
     },
     methods: {
       handleBacktopClick(){
-        let timer = setInterval(() =>{
-          if(document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0) {
-            clearInterval(timer);
-          }
-          document.body.scrollTop = Math.floor(document.body.scrollTop / 2);
-          document.documentElement.scrollTop = Math.floor(document.documentElement.scrollTop / 2);
-        }, 10)
+        // let timer = setInterval(() =>{
+        //   if(document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0) {
+        //     clearInterval(timer);
+        //   }
+        //   document.body.scrollTop = Math.floor(document.body.scrollTop / 2);
+        //   document.documentElement.scrollTop = Math.floor(document.documentElement.scrollTop / 2);
+        // }, 10)
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
       },
       _handleBacktopBtnShowHide(){
         let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;

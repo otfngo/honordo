@@ -1,21 +1,23 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
         <span class="navbar-brand">
           <img src="./logo_top.png" width="212" height="54" alt="logo">
         </span>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav" :class="{'navbar-nav-row':lang==='zh'}">
-          <router-link tag="li" class="nav-item" v-for="(item,index) in curNavData.items" :key="index" :to="item.to">
-            <span class="nav-link text-uppercase">{{item.name}}</span>
-          </router-link>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav" :class="{'navbar-nav-row':lang==='zh'}">
+            <router-link tag="li" class="nav-item" v-for="(item,index) in curNavData.items" :key="index" :to="item.to">
+              <span class="nav-link text-uppercase">{{item.name}}</span>
+            </router-link>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 </template>
 
 <script>

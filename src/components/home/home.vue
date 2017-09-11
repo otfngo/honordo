@@ -1,7 +1,7 @@
 <template>
   <div id="home">
-    <div class="about">
-      <div class="about-wrapper">
+    <section class="about">
+      <article class="about-wrapper">
         <div class="container">
           <div class="row">
             <div class="col-sm">
@@ -26,10 +26,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="bussiness">
-      <div class="bussiness-wrapper">
+      </article>
+    </section>
+    <section class="bussiness">
+      <article class="bussiness-wrapper">
         <div class="title">
           <div class="en">bussiness scope</div>
           <div class="zh">业务范围</div>
@@ -65,10 +65,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="case">
-      <div class="case-wrapper">
+      </article>
+    </section>
+    <section class="case">
+      <article class="case-wrapper">
         <div class="title">
           <div class="en">successful case</div>
           <div class="zh">成功案例</div>
@@ -110,10 +110,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="contact-wrapper">
+      </article>
+    </section>
+    <section class="contact">
+      <article class="contact-wrapper">
         <div class="title">
           <div class="en">contact us</div>
           <div class="zh">联系我们</div>
@@ -147,8 +147,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <div class="about-wrapper">
+  <section class="about">
+    <article class="about-wrapper">
       <div class="title">
         <div class="en">about us</div>
         <div class="zh">关于我们</div>
@@ -46,8 +46,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
-  <div class="bussiness">
-    <div class="bussiness-wrapper">
+  <section class="bussiness">
+    <article class="bussiness-wrapper">
       <div class="title">
         <div class="en">bussiness scope</div>
         <div class="zh">业务范围</div>
@@ -46,8 +46,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 </template>
 
 <script>

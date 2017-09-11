@@ -1,6 +1,6 @@
 <template>
-  <div class="contact">
-    <div class="contact-wrapper">
+  <section class="contact">
+    <article class="contact-wrapper">
       <div class="title">
         <div class="en">contact us</div>
         <div class="zh">联系我们</div>
@@ -34,8 +34,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 </template>
 
 <script>

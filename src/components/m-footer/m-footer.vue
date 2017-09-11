@@ -12,7 +12,7 @@
           <div class="lang-wrapper">
             <span class="current" @click="handleCurLangClick">{{currentLanguage}}</span>
             <div class="list" v-show="showLanguageList">
-              <div class="list-item" v-for="item in languageList" @click="handleLanguageClick(item.lang)">
+              <div class="list-item" v-for="(item, index) in languageList" :key="index" @click="handleLanguageClick(item.lang)">
                 {{item.name}}
               </div>
             </div>

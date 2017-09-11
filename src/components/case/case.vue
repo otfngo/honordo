@@ -1,6 +1,6 @@
 <template>
-  <div class="case">
-    <div class="case-wrapper">
+  <section class="case">
+    <article class="case-wrapper">
       <div class="title">
         <div class="en">successful case</div>
         <div class="zh">成功案例</div>
@@ -42,8 +42,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 </template>
 
 <script>

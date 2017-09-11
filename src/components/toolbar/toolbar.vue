@@ -1,5 +1,5 @@
 <template>
-  <div class="d-none d-sm-block">
+  <aside class="d-none d-sm-block">
     <div class="toolbar">
       <a class="toolbar-item">
         <span class="toolbar-btn">
@@ -15,7 +15,7 @@
         </span>
       </a>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script>

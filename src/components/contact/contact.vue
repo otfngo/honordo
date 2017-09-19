@@ -14,11 +14,10 @@
                 <p>您可以通过以下方式联系我们</p>
               </div>
               <div class="contact-info2">
-                <h5>深圳市荣和共兴科技有限公司</h5>
-                <p>电话：0755-23220387</p>
-                <p>地址：深圳市龙华新区金龙路华富锦大厦14F</p>
-                <p>网址：http://www.honordo.com</p>
-                <p>邮箱：info@honordo.com</p>
+                <p>{{contactInfo.phone.name}}：{{contactInfo.phone.value}}</p>
+                <p>{{contactInfo.email.name}}：{{contactInfo.email.value}}</p>
+                <p>{{contactInfo.fax.name}}：{{contactInfo.fax.value}}</p>
+                <p>{{contactInfo.address.name}}：{{contactInfo.address.value}}</p>
               </div>
               <div class="contact-info3">
                 <img src="../../common/image/qrcode_230.jpg" alt="二维码" width="80" height="80">
@@ -39,8 +38,10 @@
 </template>
 
 <script>
+  import {contactMixin} from 'common/js/mixin'
+
   export default {
-    name: 'contact'
+    mixins: [contactMixin]
   }
 </script>
 

@@ -47,32 +47,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'case',
-    data(){
-      return {
-        currentIndex: 0,
-        caseList: []
-      }
-    },
-    created(){
-      this.caseList = this._getCaseList();
-    },
-    methods: {
-      handleListClick(event){
-        this.currentIndex = event.currentTarget.dataset["index"];
-      },
-      _getCaseList(){
-        let list = [
-          {name: '软件开发'},
-          {name: 'IT系统服务'},
-          {name: '项目管理'},
-          {name: '服务支持'}
-        ];
+  import {caseMixin} from 'common/js/mixin'
 
-        return list;
-      }
-    }
+  export default {
+    mixins: [caseMixin]
   }
 </script>
 

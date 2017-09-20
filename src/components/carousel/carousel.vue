@@ -7,22 +7,24 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="./banner2.jpg" alt="First slide">
+        <img class="d-block w-100 img" src="./banner2.jpg" alt="荣和共兴展示图1">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./banner1.jpg" alt="Second slide">
+        <img class="d-block w-100 img" src="./banner1.jpg" alt="荣和共兴展示图2">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./banner3.jpg" alt="Third slide">
+        <img class="d-block w-100 img" src="./banner3.jpg" alt="荣和共兴展示图3">
       </div>
     </div>
   </section>
 </template>
 
 <script>
-  export default {
-  }
+  export default {}
 </script>
 
 <style scoped lang="stylus">
+  .img {
+    min-height 15rem
+  }
 </style>

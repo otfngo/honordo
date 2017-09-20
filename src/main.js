@@ -1,9 +1,15 @@
-import Vue from 'vue';
-import App from './App';
-import router from './router';
+import Vue from 'vue'
+import App from './App'
+import router from './router'
 import store from './store'
+import 'bootstrap/js/dist/util'
+import 'bootstrap/js/dist/collapse'
+import 'bootstrap/js/dist/carousel'
 
-import 'common/stylus/index.styl';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'common/stylus/index.styl'
+
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
@@ -11,4 +17,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-});
+})

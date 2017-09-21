@@ -18,8 +18,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: true
     })
   },
-  // devtool: config.build.productionSourceMap ? '#source-map' : false,
-  devtool: false,
+  devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
@@ -34,7 +33,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       compress: {
         warnings: false
       },
-      sourceMap: true
+      sourceMap: false,
+      comments: false,
+      except: ['$super', '$', 'exports', 'require']
     }),
     // extract css into its own file
     new ExtractTextPlugin({
@@ -44,7 +45,10 @@ var webpackConfig = merge(baseWebpackConfig, {
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
-        safe: true
+        safe: true,
+        discardComments: {
+          removeAll: true
+        }
       }
     }),
     // generate dist index.html with correct asset hash for caching.

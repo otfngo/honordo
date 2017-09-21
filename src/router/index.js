@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Home from 'components/home/home'
 
 Vue.use(Router)
 
-const Home = () => import('components/home/home')
 const About = () => import('components/about/about')
 const Bussiness = () => import('components/bussiness/bussiness')
 const Case = () => import('components/case/case')

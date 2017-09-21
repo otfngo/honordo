@@ -1,5 +1,5 @@
 <template>
-  <main id="home">
+  <section id="home">
     <section class="about">
       <article class="about-wrapper">
         <div class="container">
@@ -149,7 +149,7 @@
         </div>
       </article>
     </section>
-  </main>
+  </section>
 </template>
 
 <script>

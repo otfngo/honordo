@@ -18,7 +18,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: true
     })
   },
-  devtool: config.build.productionSourceMap ? '#source-map' : false,
+  // devtool: config.build.productionSourceMap ? '#source-map' : false,
+  devtool: false,
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
@@ -56,7 +57,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       minify: {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: true
+        removeAttributeQuotes: false,
+        removeScriptTypeAttributes: true,
+        keepClosingSlash: true
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },

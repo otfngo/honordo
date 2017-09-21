@@ -1,12 +1,13 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from 'components/home/home';
-import About from 'components/about/about';
-import Bussiness from 'components/bussiness/bussiness';
-import Case from 'components/case/case';
-import Contact from 'components/contact/contact';
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
+Vue.use(Router)
+
+const Home = resolve => import('components/home/home').then(module => resolve(module))
+const About = resolve => import('components/about/about').then(module => resolve(module))
+const Bussiness = resolve => import('components/bussiness/bussiness').then(module => resolve(module))
+const Case = resolve => import('components/case/case').then(module => resolve(module))
+const Contact = resolve => import('components/contact/contact').then(module => resolve(module))
 
 export default new Router({
   routes: [
@@ -31,4 +32,4 @@ export default new Router({
     {path: '/:lang/*', redirect: '/:lang/home'},
     {path: '*', redirect: '/home'}
   ]
-});
+})

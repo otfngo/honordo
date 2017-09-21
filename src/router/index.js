@@ -3,11 +3,11 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const Home = resolve => import('components/home/home').then(module => resolve(module))
-const About = resolve => import('components/about/about').then(module => resolve(module))
-const Bussiness = resolve => import('components/bussiness/bussiness').then(module => resolve(module))
-const Case = resolve => import('components/case/case').then(module => resolve(module))
-const Contact = resolve => import('components/contact/contact').then(module => resolve(module))
+const Home = () => import('components/home/home')
+const About = () => import('components/about/about')
+const Bussiness = () => import('components/bussiness/bussiness')
+const Case = () => import('components/case/case')
+const Contact = () => import('components/contact/contact')
 
 export default new Router({
   routes: [

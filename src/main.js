@@ -13,8 +13,11 @@ import 'common/stylus/index.styl'
 Vue.config.productionTip = false
 
 Vue.directive('webp', function (el, binding) {
-  if (false && CAN_USE_WEBP) {
-    el.src = el.src + WEBP_EXT
+  if (CAN_USE_WEBP) {
+    let src = el.src
+    // let idx = src.indexOf('/static')
+    // src = src.slice(idx)
+    el.src = src + WEBP_EXT
   }
 })
 

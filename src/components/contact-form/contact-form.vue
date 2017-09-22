@@ -24,7 +24,6 @@
 
 <script>
   export default {
-    name: 'contact-form',
     mounted(){
       this.form = this.$refs["contact-form"];
       this.form.addEventListener("submit", this.handleFormSubmitClick, false);

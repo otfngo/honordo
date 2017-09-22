@@ -20,7 +20,7 @@
                 <p>{{contactInfo.address.name}}：{{contactInfo.address.value}}</p>
               </div>
               <div class="contact-info3">
-                <img src="../../common/image/qrcode_230.jpg" alt="二维码" width="80" height="80">
+                <img src="../../common/image/qrcode_230.jpg" alt="二维码" width="80" height="80" v-webp:src="">
               </div>
             </div>
             <div class="col-sm">
@@ -28,7 +28,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <img class="img-fluid" src="./map.png" alt="map">
+              <img class="img-fluid" src="./map.png" alt="map" v-webp:src="">
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="img text-center">
-        <img src="../../common/image/qrcode_230.jpg" alt="二维码">
+        <img src="../../common/image/qrcode_230.jpg" alt="二维码" v-webp:src="">
       </div>
       <div class="d-flex justify-content-start">
         <div class="desc">

@@ -2,8 +2,10 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var multi = require('multi-loader')
+var time = new Date().getTime()
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -41,11 +43,15 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
-        }
+        // loader: 'url-loader',
+        // options: {
+        //   limit: 10000,
+        //   name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        // },
+        loader: multi(
+          'file-loader?name=' + utils.assetsPath('img/[name].' + time + '.[ext]') + '.webp!webp-loader?{quality: 65}',
+          'file-loader?name=' + utils.assetsPath('img/[name].' + time + '.[ext]')
+        )
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,

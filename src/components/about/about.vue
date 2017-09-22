@@ -9,7 +9,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm">
-              <img class="img" src="./img_abouts.png" alt="about">
+              <img class="img" src="./img_abouts.png" alt="about" v-webp:src="">
             </div>
             <div class="col-sm">
               <h5>公司理念</h5>

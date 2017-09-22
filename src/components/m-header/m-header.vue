@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
         <span class="navbar-brand">
-          <img src="./logo_top.png" width="212" height="54" alt="logo">
+          <img src="./logo_top.png" width="212" height="54" alt="logo" v-webp:src="">
         </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>

@@ -7,13 +7,13 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100 img" src="./banner2.jpg" alt="荣和共兴展示图1">
+        <img class="d-block w-100 img" src="./banner2.jpg" alt="荣和共兴展示图1" v-webp:src="">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100 img" src="./banner1.jpg" alt="荣和共兴展示图2">
+        <img class="d-block w-100 img" src="./banner1.jpg" alt="荣和共兴展示图2" v-webp:src="">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100 img" src="./banner3.jpg" alt="荣和共兴展示图3">
+        <img class="d-block w-100 img" src="./banner3.jpg" alt="荣和共兴展示图3" v-webp:src="">
       </div>
     </div>
   </section>

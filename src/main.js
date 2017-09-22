@@ -14,10 +14,7 @@ Vue.config.productionTip = false
 
 Vue.directive('webp', function (el, binding) {
   if (CAN_USE_WEBP) {
-    let src = el.src
-    // let idx = src.indexOf('/static')
-    // src = src.slice(idx)
-    el.src = src + WEBP_EXT
+    el.src += WEBP_EXT
   }
 })
 

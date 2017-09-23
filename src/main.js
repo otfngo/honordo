@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-// require("babel-polyfill")
+require("babel-polyfill")
 import {CAN_USE_WEBP, WEBP_EXT} from './api/config'
 import 'bootstrap/js/dist/util'
 import 'bootstrap/js/dist/collapse'

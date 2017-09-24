@@ -50,7 +50,7 @@ module.exports = {
         // },
         loader: multi(
           'file-loader?name=' + utils.assetsPath('img/[name].' + time + '.[ext]') + '.webp!webp-loader?{quality: 65}',
-          'file-loader?name=' + utils.assetsPath('img/[name].' + time + '.[ext]')
+          'url-loader?limit=10000&name=' + utils.assetsPath('img/[name].' + time + '.[ext]') + ''
         )
       },
       {

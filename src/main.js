@@ -2,7 +2,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-require("babel-polyfill")
+
+require('babel-polyfill')
 import {CAN_USE_WEBP, WEBP_EXT} from './api/config'
 import 'bootstrap/js/dist/util'
 import 'bootstrap/js/dist/collapse'
@@ -15,6 +16,7 @@ Vue.config.productionTip = false
 
 Vue.directive('webp', function (el, binding) {
   if (CAN_USE_WEBP) {
+    if (el.src.startsWith('data:')) return
     el.src += WEBP_EXT
   }
 })

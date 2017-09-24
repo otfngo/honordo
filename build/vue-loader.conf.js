@@ -14,5 +14,9 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
+  },
+  cssModules: {
+    localIdentName: '[hash:base64:5]',
+    camelCase: true
   }
 }

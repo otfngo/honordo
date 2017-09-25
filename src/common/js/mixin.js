@@ -1,6 +1,6 @@
 import {mapGetters} from 'vuex'
 
-let caseMixin = {
+const caseMixin = {
   data() {
     return {
       currentIndex: 0,
@@ -27,7 +27,7 @@ let caseMixin = {
   }
 }
 
-let contactMixin = {
+const contactMixin = {
   computed: {
     contactInfo() {
       return this._getContactData().find(value => value.lang === this.lang).items

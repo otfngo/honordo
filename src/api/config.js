@@ -5,6 +5,11 @@ const LANGUAGE_LIST = [
   {lang: 'en', name: 'English', aboutLink: 'en/about-us'}
 ]
 
+const ABOUT_LINK_LIST = [
+  {lang: 'zh', link: 'about-us'},
+  {lang: 'en', link: 'en/about-us'}
+]
+
 const CAN_USE_WEBP = (function () {
   let elem = document.createElement('canvas')
   if (!!(elem.getContext && elem.getContext('2d'))) {
@@ -18,6 +23,7 @@ const WEBP_EXT = '.webp'
 export {
   DEFAULT_LANGUAGE,
   LANGUAGE_LIST,
+  ABOUT_LINK_LIST,
   CAN_USE_WEBP,
   WEBP_EXT,
 }

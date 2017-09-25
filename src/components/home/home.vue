@@ -154,15 +154,18 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import {LANGUAGE_LIST} from 'api/config'
+  import {ABOUT_LINK_LIST} from 'api/config'
   import {caseMixin, contactMixin} from 'common/js/mixin'
 
   export default {
     mixins: [caseMixin, contactMixin],
     computed: {
       aboutLink() {
-        let link = LANGUAGE_LIST.find(value => value.lang === this.lang).aboutLink
-        return `#/${link}`
+        let aboutLink = ABOUT_LINK_LIST.find(item => item.lang === this.lang)
+        if (aboutLink) {
+          return `#/${aboutLink.link}`
+        }
+        return '#'
       },
       ...mapGetters([
         'lang'

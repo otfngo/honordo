@@ -6,13 +6,14 @@
       </div>
       <div class="d-flex justify-content-start">
         <div class="desc">
-          <p v-html="copyrightData.content"></p>
+          <p v-html="copyrightData"></p>
         </div>
         <div class="ml-auto mr-5">
           <div class="lang-wrapper">
             <span class="current" @click="handleCurLangClick">{{currentLanguage}}</span>
             <div class="list" v-show="showLanguageList">
-              <div class="list-item" v-for="(item, index) in languageList" :key="index" @click="handleLanguageClick(item.lang)">
+              <div class="list-item" v-for="(item, index) in languageList" :key="index"
+                   @click="handleLanguageClick(item.lang)">
                 {{item.name}}
               </div>
             </div>
@@ -28,54 +29,47 @@
   import {LANGUAGE_LIST} from 'api/config'
 
   export default {
-    data(){
+    data() {
       return {
         showLanguageList: false
       }
     },
     computed: {
-      copyrightData(){
-        return this._getCopyrightData().find(value => value.lang === this.lang).items
+      copyrightData() {
+        let data = this._getCopyrightData().find(item => item.lang === this.lang)
+        if (data) return data.content
+        return ''
       },
-      currentLanguage(){
-        return LANGUAGE_LIST.find(value => value.lang === this.lang).name
+      currentLanguage() {
+        return LANGUAGE_LIST.find(item => item.lang === this.lang).name
       },
-      languageList(){
-        return LANGUAGE_LIST.filter(value => value.lang !== this.lang)
+      languageList() {
+        return LANGUAGE_LIST.filter(item => item.lang !== this.lang)
       },
       ...mapGetters([
         'lang'
       ])
     },
     methods: {
-      handleLanguageClick(lang){
-        if(lang === 'zh') {
+      handleLanguageClick(lang) {
+        if (lang === 'zh') {
           this.$router.push('/home')
-        } else if(lang === 'en') {
+        } else if (lang === 'en') {
           this.$router.push('/en/home')
         }
         this.showLanguageList = false
       },
-      handleCurLangClick(){
+      handleCurLangClick() {
         this.showLanguageList = !this.showLanguageList
       },
-      _getCopyrightData(){
-        let list = [
-          {
-            lang: 'zh',
-            items: {
-              content: '版权所有&copy;深圳市荣和共兴科技有限公司 粤ICP备：00000000号 技术支持：荣和共兴'
-            }
-          },
-          {
-            lang: 'en',
-            items: {
-              content: 'Copyright&copy;Shenzhen Ronghe Gongxing Technology Co.,Ltd ICP:00000000 Technical Support：Ronghe Gongxing'
-            }
-          }
-        ]
-
-        return list
+      _getCopyrightData() {
+        return [{
+          lang: 'zh',
+          content: '版权所有&copy;深圳市荣和共兴科技有限公司 粤ICP备：00000000号 技术支持：荣和共兴'
+        }, {
+          lang: 'en',
+          content: 'Copyright&copy;Shenzhen Ronghe Gongxing Technology Co.,Ltd ICP:00000000 Technical Support：Ronghe Gongxing'
+        }]
       }
     }
   }

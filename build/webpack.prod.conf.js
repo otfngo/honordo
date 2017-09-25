@@ -8,7 +8,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
+// var InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
 
 var env = config.build.env
 
@@ -22,8 +22,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    filename: utils.assetsPath('js/[name].[chunkhash:7].js'),
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash:7].js')
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -40,7 +40,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].[contenthash].css')
+      filename: utils.assetsPath('css/[name].[contenthash:7].css')
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     // Compress extracted CSS. We are using this plugin so that possible
@@ -72,9 +72,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
-    new InlineManifestWebpackPlugin({
-      name: 'webpackManifest'
-    }),
+    // new InlineManifestWebpackPlugin({
+    //   name: 'webpackManifest'
+    // }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

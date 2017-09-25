@@ -3,7 +3,7 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 var multi = require('multi-loader')
-var time = new Date().getTime()
+var time = new Date().getTime().toString(16).slice(4)
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)

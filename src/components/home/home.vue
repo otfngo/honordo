@@ -20,7 +20,7 @@
                     公司本着“客户至上、以人为本”的原则，致力于帮助企业通过互联网持续创造企业的价值最大化！公司感谢新老客户一直以来的大力支持和信任，我们将再接再厉，与全球企业一起共同成长，相融共生，共创美好未来。</p>
                 </div>
                 <div class="more">
-                  <a :href="aboutLink">更多</a>
+                  <a :href="aboutLink" @click.prevent="toAbout">更多</a>
                 </div>
               </div>
             </div>
@@ -161,15 +161,28 @@
     mixins: [caseMixin, contactMixin],
     computed: {
       aboutLink() {
-        let aboutLink = ABOUT_LINK_LIST.find(item => item.lang === this.lang)
+        let aboutLink = this._getAboutLink()
         if (aboutLink) {
-          return `#/${aboutLink.link}`
+          return `/${aboutLink.link}`
         }
-        return '#'
+        return ''
       },
       ...mapGetters([
         'lang'
       ])
+    },
+    methods: {
+      toAbout() {
+        let aboutLink = this._getAboutLink()
+        if (aboutLink) {
+          this.$router.push({
+            path: `/${aboutLink.link}`
+          })
+        }
+      },
+      _getAboutLink() {
+        return ABOUT_LINK_LIST.find(item => item.lang === this.lang)
+      }
     }
   }
 </script>

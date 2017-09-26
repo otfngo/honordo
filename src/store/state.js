@@ -1,5 +1,7 @@
+import {DEFAULT_LANGUAGE} from '../api/config'
+
 const state = {
-  lang: ''
+  lang: DEFAULT_LANGUAGE
 }
 
 export default state

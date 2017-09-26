@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from 'components/home/home'
+import {DEFAULT_LANGUAGE} from '../api/config'
 
 Vue.use(Router)
 
@@ -10,19 +11,8 @@ const Case = () => import('components/case/case')
 const Contact = () => import('components/contact/contact')
 
 export default new Router({
+  mode: 'history',
   routes: [
-    {path: '/zh/home', redirect: '/home'},
-    {path: '/zh/about-us', redirect: '/about-us'},
-    {path: '/zh/bussiness-scope', redirect: '/bussiness-scope'},
-    {path: '/zh/successful-case', redirect: '/successful-case'},
-    {path: '/zh/contact-us', redirect: '/contact-us'},
-
-    {path: '/home', component: Home},
-    {path: '/about-us', component: About},
-    {path: '/bussiness-scope', component: Bussiness},
-    {path: '/successful-case', component: Case},
-    {path: '/contact-us', component: Contact},
-
     {path: '/:lang/home', component: Home},
     {path: '/:lang/about-us', component: About},
     {path: '/:lang/bussiness-scope', component: Bussiness},
@@ -30,6 +20,6 @@ export default new Router({
     {path: '/:lang/contact-us', component: Contact},
 
     {path: '/:lang/*', redirect: '/:lang/home'},
-    {path: '*', redirect: '/home'}
+    {path: '*', redirect: `/${DEFAULT_LANGUAGE}/home`}
   ]
 })

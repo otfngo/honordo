@@ -1,12 +1,12 @@
 const DEFAULT_LANGUAGE = 'zh'
 
 const LANGUAGE_LIST = [
-  {lang: 'zh', name: '中文简体', aboutLink: 'about-us'},
-  {lang: 'en', name: 'English', aboutLink: 'en/about-us'}
+  {lang: 'zh', name: '中文简体'},
+  {lang: 'en', name: 'English'}
 ]
 
 const ABOUT_LINK_LIST = [
-  {lang: 'zh', link: 'about-us'},
+  {lang: 'zh', link: 'zh/about-us'},
   {lang: 'en', link: 'en/about-us'}
 ]
 
@@ -25,5 +25,5 @@ export {
   LANGUAGE_LIST,
   ABOUT_LINK_LIST,
   CAN_USE_WEBP,
-  WEBP_EXT,
+  WEBP_EXT
 }

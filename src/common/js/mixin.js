@@ -45,7 +45,7 @@ const contactMixin = {
             phone: {name: '电话', value: '0755-2322-0387'},
             email: {name: '邮箱', value: 'info@honordo.com'},
             fax: {name: '传真', value: '0755-2322-0387'},
-            address: {name: '地址', value: '深圳市龙华新区金龙路华富锦大厦'}
+            address: {name: '地址', value: '深圳市龙华新区金龙路华富锦大厦1410'}
           }
         },
         {

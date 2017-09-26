@@ -16,25 +16,26 @@
   import MFooter from 'components/m-footer/m-footer'
   import Toolbar from 'components/toolbar/toolbar'
   import {mapMutations} from 'vuex'
-  import {DEFAULT_LANGUAGE,LANGUAGE_LIST} from 'api/config'
+  import {DEFAULT_LANGUAGE, LANGUAGE_LIST} from 'api/config'
 
   export default {
-    created(){
-      this.fetchLang();
+    created() {
+      this.fetchLang()
     },
     watch: {
       '$route': 'fetchLang'
     },
     methods: {
-      fetchLang(){
-        let language = this.$route.params.lang,
-          languages=LANGUAGE_LIST.map(value=>value.lang)
+      fetchLang() {
+        let language = this.$route.params.lang
+        language = language && language.toLowerCase()
 
-        if(languages.includes(language) === false) {
+        let exist_language = LANGUAGE_LIST.find(item => item.lang === language)
+        if (!exist_language) {
           language = DEFAULT_LANGUAGE
         }
 
-        if(this.lang !== language) {
+        if (this.lang !== language) {
           this.lang = language
           this.setLang(language)
         }

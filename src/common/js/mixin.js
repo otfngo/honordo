@@ -15,14 +15,12 @@ const caseMixin = {
       this.currentIndex = event.currentTarget.dataset['index']
     },
     _getCaseList() {
-      let list = [
+      return [
         {name: '软件开发'},
         {name: 'IT系统服务'},
         {name: '项目管理'},
         {name: '服务支持'}
       ]
-
-      return list
     }
   }
 }
@@ -38,7 +36,7 @@ const contactMixin = {
   },
   methods: {
     _getContactData() {
-      let list = [
+      return [
         {
           lang: 'zh',
           items: {
@@ -60,8 +58,6 @@ const contactMixin = {
           }
         }
       ]
-
-      return list
     }
   }
 }

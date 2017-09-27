@@ -15,7 +15,7 @@ import 'common/stylus/index.styl'
 Vue.config.productionTip = false
 
 Vue.directive('webp', {
-  bind: function (el, binding) {
+  bind: (el, binding) => {
     if (CAN_USE_WEBP) {
       if (el.src.startsWith('data:')) return
       el.src += WEBP_EXT

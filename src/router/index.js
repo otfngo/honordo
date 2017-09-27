@@ -11,7 +11,6 @@ const Case = () => import('components/case/case')
 const Contact = () => import('components/contact/contact')
 
 export default new Router({
-  mode: 'history',
   routes: [
     {path: '/:lang/home', component: Home},
     {path: '/:lang/about-us', component: About},

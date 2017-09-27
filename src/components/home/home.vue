@@ -163,7 +163,7 @@
       aboutLink() {
         let aboutLink = this._getAboutLink()
         if (aboutLink) {
-          return `/${aboutLink.link}`
+          return `${aboutLink.link}`
         }
         return ''
       },
@@ -176,7 +176,7 @@
         let aboutLink = this._getAboutLink()
         if (aboutLink) {
           this.$router.push({
-            path: `/${aboutLink.link}`
+            path: `${aboutLink.link}`
           })
         }
       },
